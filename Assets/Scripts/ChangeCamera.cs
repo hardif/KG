@@ -7,8 +7,10 @@ public class ChangeCamera : MonoBehaviour
     public Camera titlecamera;
     public Camera setcamera;
     public Button setbtn;
+    public Button canclebtn, okbtn;
     public GameObject titleUI;
     public GameObject setUI;
+    public TextMesh asd;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,25 +23,31 @@ public class ChangeCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        setbtn.onClick.AddListener(ChangeUI);
-        setbtn.onClick.AddListener(ShowOverheadView);
+        
+        //setbtn.onClick.AddListener(changeSet);
+        //setbtn.onClick.AddListener(showSetCamera);
     }
 
-    public void ShowOverheadView()
+    public void showSetCamera()
     {
         titlecamera.enabled = false;
         setcamera.enabled = true;
     }
 
-    public void ShowFirstPersonView()
+    public void showTitleCamera()
     {
         titlecamera.enabled = true;
         setcamera.enabled = false;
     }
-    public void ChangeUI()
+    public void changeSet()
     {
         setUI.SetActive(true);
         titleUI.SetActive(false);
 
+    }
+    public void changeTitle()
+    {
+        setUI.SetActive(false);
+        titleUI.SetActive(true);
     }
 }
