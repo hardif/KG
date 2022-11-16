@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 public class ChangeCamera : MonoBehaviour
 {
     public Camera titlecamera;
@@ -10,12 +11,16 @@ public class ChangeCamera : MonoBehaviour
     public Button canclebtn, okbtn;
     public GameObject titleUI;
     public GameObject setUI;
-    public TextMesh asd;
+    public TextMeshProUGUI numText;
+
     // Start is called before the first frame update
     void Start()
     {
+        numText.GetComponent<TextMeshProUGUI>().faceColor = Color.white;
+
         //titleUI.SetActive(false);
         setUI.SetActive(false);
+        //titlecamera.enabled = true;
         //setbtn.onClick.AddListener(ChangeUI);
         //setbtn.onClick.AddListener(ShowFirstPersonView);
     }
@@ -23,7 +28,7 @@ public class ChangeCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        numText.faceColor = Color.white;
         //setbtn.onClick.AddListener(changeSet);
         //setbtn.onClick.AddListener(showSetCamera);
     }
@@ -49,5 +54,12 @@ public class ChangeCamera : MonoBehaviour
     {
         setUI.SetActive(false);
         titleUI.SetActive(true);
+        numText.GetComponent<TextMeshProUGUI>().faceColor = Color.white;
+
+    }
+    public void changeTextColor()
+    {
+        numText.GetComponent<TextMeshProUGUI>().faceColor = Color.white;
+        //numText.color = new Color32(255, 255, 255, 255);
     }
 }
