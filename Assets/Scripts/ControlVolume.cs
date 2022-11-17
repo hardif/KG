@@ -17,4 +17,8 @@ public class ControlSetting : MonoBehaviour
     {
         
     }
+    public void ToggleAudioVolume()
+    {
+        AudioListener.volume = AudioListener.volume == 0 ? 1 : 0;
+    }
 }
