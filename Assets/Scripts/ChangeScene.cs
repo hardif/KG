@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Collections;
 
-
 public class ChangeScene : MonoBehaviour
 {
     float timer;
@@ -41,7 +40,7 @@ public class ChangeScene : MonoBehaviour
     {
         float currentTime = 0.0f;
         float percent = 0.0f;
-
+        Cursor.lockState = CursorLockMode.Locked;
         while (percent <1)
         {
             currentTime += Time.deltaTime;
