@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+
 public class ChangeCamera : MonoBehaviour
 {
     public Camera titlecamera;
@@ -62,4 +63,6 @@ public class ChangeCamera : MonoBehaviour
         numText.GetComponent<TextMeshProUGUI>().faceColor = Color.white;
         //numText.color = new Color32(255, 255, 255, 255);
     }
+
+
 }
