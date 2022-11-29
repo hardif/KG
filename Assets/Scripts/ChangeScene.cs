@@ -53,6 +53,6 @@ public class ChangeScene : MonoBehaviour
             yield return null;
 
         }
-        SceneManager.LoadScene(0);
+        EndLoading.LoadScene("Scene_A");
     }
 }
