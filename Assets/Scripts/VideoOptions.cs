@@ -9,25 +9,14 @@ public class VideoOptions : MonoBehaviour
     List<Resolution> resolutions = new List<Resolution>();
     public TMP_Dropdown resolutionDropdown;
     public bool fullscreen;
-    //public TMP_Text text;
-    // Start is called before the first frame update
-    void Start()
-    {
-        InitUI();
-    }
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        if(resolutionDropdown.value == 1)
-        {
-            changeWindow();
-        }
-          
+        fullscreen = true;
     }
     void InitUI()
     {
-        resolutionDropdown = this.GetComponent<TMP_Dropdown>();
+        //resolutionDropdown = this.GetComponent<TMP_Dropdown>();
         /*
         resolutionDropdown.ClearOptions();
         foreach (Resolution item in resolutions)
@@ -41,9 +30,29 @@ public class VideoOptions : MonoBehaviour
         resolutionDropdown.RefreshShownValue();
         */
     }
-    void changeWindow()
+    public void changeWindow()
     {
         Screen.fullScreen = !Screen.fullScreen;
-        Debug.Log("123");
+        fullscreen = !fullscreen;
+    }
+    
+    public void changeRes()
+    {
+        switch (resolutionDropdown.value)
+        {
+            case 0:
+                Screen.SetResolution(1920, 1080, fullscreen);
+                break;
+            case 1:
+                Screen.SetResolution(1600, 900, fullscreen);
+                break;
+            case 2:
+                Screen.SetResolution(1280, 720, fullscreen);
+                break;
+            case 3:
+                Screen.SetResolution(800, 600, fullscreen);
+                break;
+
+        }
     }
 }

@@ -3,21 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ControlSetting : MonoBehaviour
+public class ControlVolume : MonoBehaviour
 {
-    public Slider ctrlvol;
     // Start is called before the first frame update
-    void Start()
+    public Toggle toggle;
+    public void ToggleAudioVolume1()
     {
-        
+        if (toggle.isOn) AudioListener.volume = 1;
+        else AudioListener.volume = 0;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    public void ToggleAudioVolume()
+    public void ToggleAudioVolume2()
     {
         AudioListener.volume = AudioListener.volume == 0 ? 1 : 0;
     }
