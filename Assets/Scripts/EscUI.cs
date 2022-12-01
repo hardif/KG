@@ -1,10 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EscUI : MonoBehaviour
 {
     public GameObject canvas;
+    public GameObject SetUI;
+    public GameObject ESCUI;
     int gamestop = 0;
     // Start is called before the first frame update
     void Start()
@@ -47,8 +47,14 @@ public class EscUI : MonoBehaviour
     {
 
     }
-    public void OnClicksettings()
+    public void OnSettings()
     {
-
+        SetUI.SetActive(true);
+        ESCUI.SetActive(false);
+    }
+    public void OffSettings()
+    {
+        SetUI.SetActive(false);
+        ESCUI.SetActive(true);
     }
 }
