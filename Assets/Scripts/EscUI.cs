@@ -1,11 +1,12 @@
 
 using UnityEngine;
-
+using UnityEngine.UI;
 public class EscUI : MonoBehaviour
 {
     public GameObject canvas;
     public GameObject SetUI;
     public GameObject ESCUI;
+    public Button OKbtn;
     public Camera InGameCamera;
     int gamestop = 0;
     // Start is called before the first frame update
@@ -26,11 +27,12 @@ public class EscUI : MonoBehaviour
                 gamestop++;
                 Time.timeScale = 0;
             }
-            else
+            else if (Input.GetKeyUp(KeyCode.Escape) && canvas.activeSelf)
             {
                 canvas.SetActive(false);
                 gamestop--;
                 Time.timeScale = 1;
+                InGameCamera.enabled = true;
             }
 
         }
@@ -48,9 +50,9 @@ public class EscUI : MonoBehaviour
     }
     public void OffSettings()
     {
-        SetUI.SetActive(false);
         ESCUI.SetActive(true);
-        InGameCamera.enabled = true;
+        SetUI.SetActive(false);
+        
     }
 
     public void OnClickSave()
