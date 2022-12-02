@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1706.6667
     height: 976
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Game
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -189,8 +189,8 @@ MonoBehaviour:
     y: 0
     width: 246.66667
     height: 645.3333
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -431,21 +431,21 @@ MonoBehaviour:
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 480}
-      m_SelectedIDs: 9c800000
-      m_LastClickedID: 32924
-      m_ExpandedIDs: 5c54feff34fbffff
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 14beffff
+      m_LastClickedID: -16876
+      m_ExpandedIDs: 50beffff34fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: FpsController
-        m_OriginalName: FpsController
+        m_Name: "\uC7A5\uC0B0\uBC94 \uD45C\uC9C0\uD310"
+        m_OriginalName: "\uC7A5\uC0B0\uBC94 \uD45C\uC9C0\uD310"
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 32924
+        m_UserData: -16816
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
         m_OriginalEventType: 0
@@ -683,9 +683,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 523.24225, y: -34.872948, z: 572.3631}
+    m_Target: {x: 428.24295, y: 18.696365, z: 567.7223}
     speed: 2
-    m_Value: {x: 523.24225, y: -34.872948, z: 572.3631}
+    m_Value: {x: 428.24295, y: 18.696365, z: 567.7223}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -732,13 +732,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.3261827, y: 0.018715464, z: -0.006548048, w: -0.94516057}
+    m_Target: {x: -0.072627425, y: 0.057142045, z: -0.004254185, w: -0.99577075}
     speed: 2
-    m_Value: {x: -0.32616365, y: 0.01871437, z: -0.0065476657, w: -0.9451054}
+    m_Value: {x: -0.07262316, y: 0.057138693, z: -0.0042539355, w: -0.99571234}
   m_Size:
-    m_Target: 115.24467
+    m_Target: 8.903213
     speed: 2
-    m_Value: 115.24467
+    m_Value: 8.903213
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -915,9 +915,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 160.33331}
-    m_SelectedIDs: 7aa60000
-    m_LastClickedID: 42618
-    m_ExpandedIDs: 0000000036a40000f6a4000024a5000028a5000000ca9a3bffffff7f
+    m_SelectedIDs: 0ea90000
+    m_LastClickedID: 43278
+    m_ExpandedIDs: 00000000cea80000dea8000010a9000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -945,7 +945,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000036a40000
+    m_ExpandedIDs: 00000000cea80000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -972,7 +972,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000c2d8ffff3ad5ffff32d3ffffa4d1ffff000000003c5c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
