@@ -24,7 +24,6 @@ public class ChangeScene : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
         if (timestart == 1){
             //timer += Time.deltaTime;
             StartCoroutine(Fade());
