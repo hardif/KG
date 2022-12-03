@@ -12,7 +12,7 @@ public class EscUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //ManageData.Instance.LoadGameData();
+        ManageData.Instance.LoadGameData();
     }
 
     // Update is called once per frame
