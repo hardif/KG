@@ -7,7 +7,7 @@ public class FlashLight : MonoBehaviour
     Light flash_light;
     Transform tr;
     KeyCode[] KeyCode_List;
-
+    private static bool Flash = false;
     public AudioClip clip;
 
     // Start is called before the first frame update
@@ -47,11 +47,16 @@ public class FlashLight : MonoBehaviour
         KeyCode result = User_Input();
         if (result == KeyCode_List[0])
         {
-            if (flash_light.enabled)
-                flash_light.enabled = false;
-            else
-                flash_light.enabled = true;
-            SFXPlay("손전등", clip);
+            if (Flash)
+            {
+                if (flash_light.enabled)
+                    flash_light.enabled = false;
+                else
+                {
+                    flash_light.enabled = true;
+                    SFXPlay("손전등", clip);
+                }
+            }
         }
     }
     KeyCode User_Input()
@@ -65,4 +70,10 @@ public class FlashLight : MonoBehaviour
         }
         return result;
     }
+    public static void getFlash()
+    {
+        Flash = true;
+    }
+
+    
 }

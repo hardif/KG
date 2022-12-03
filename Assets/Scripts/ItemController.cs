@@ -6,6 +6,8 @@ using TMPro;
 
 public class ItemController : MonoBehaviour
 {
+
+    FlashLight fl = new FlashLight();
     [SerializeField]
     private float range;  // 아이템 습득이 가능한 최대 거리
 
@@ -31,6 +33,10 @@ public class ItemController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             CheckItem();
+            if(hitInfo.transform.GetComponent<ItemPickUp>().item.itemName == "FlashLight")
+            {
+                FlashLight.getFlash();
+            }
             CanPickUp();
         }
     }
