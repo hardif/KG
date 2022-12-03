@@ -7,9 +7,20 @@ public class FlashLight : MonoBehaviour
     Light flash_light;
     Transform tr;
     KeyCode[] KeyCode_List;
-    AudioSource audioSource;
+
+    public AudioClip clip;
 
     // Start is called before the first frame update
+
+    public void SFXPlay(string sfxName, AudioClip clip)
+    {
+        GameObject go = new GameObject(sfxName + "Sound");
+        AudioSource audiosource = go.AddComponent<AudioSource>();
+        audiosource.clip = clip;
+        audiosource.Play();
+
+        Destroy(go, clip.length);
+    }
 
     private void Start()
     {
@@ -19,7 +30,6 @@ public class FlashLight : MonoBehaviour
     void Awake()
     {
         flash_light = GetComponent<Light>();
-        audioSource = gameObject.AddComponent<AudioSource>();
         tr = this.transform;
 
         Key_Depoly();
@@ -30,7 +40,6 @@ public class FlashLight : MonoBehaviour
         KeyCode_List = new KeyCode[10];
         KeyCode_List[0] = KeyCode.F;
         KeyCode_List[1] = KeyCode.Escape;
-        //audioSource.Play();
     }
     // Update is called once per frame
     void Update()
@@ -42,6 +51,7 @@ public class FlashLight : MonoBehaviour
                 flash_light.enabled = false;
             else
                 flash_light.enabled = true;
+            SFXPlay("¼ÕÀüµî", clip);
         }
     }
     KeyCode User_Input()
