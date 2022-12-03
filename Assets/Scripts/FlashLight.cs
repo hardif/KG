@@ -7,6 +7,7 @@ public class FlashLight : MonoBehaviour
     Light flash_light;
     Transform tr;
     KeyCode[] KeyCode_List;
+    AudioSource audioSource;
 
     // Start is called before the first frame update
 
@@ -18,6 +19,7 @@ public class FlashLight : MonoBehaviour
     void Awake()
     {
         flash_light = GetComponent<Light>();
+        audioSource = gameObject.AddComponent<AudioSource>();
         tr = this.transform;
 
         Key_Depoly();
@@ -28,7 +30,7 @@ public class FlashLight : MonoBehaviour
         KeyCode_List = new KeyCode[10];
         KeyCode_List[0] = KeyCode.F;
         KeyCode_List[1] = KeyCode.Escape;
-
+        //audioSource.Play();
     }
     // Update is called once per frame
     void Update()
