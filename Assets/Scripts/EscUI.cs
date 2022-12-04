@@ -3,9 +3,9 @@ using UnityEngine;
 using UnityEngine.UI;
 public class EscUI : MonoBehaviour
 {
-    public GameObject canvas;
     public GameObject SetUI;
     public GameObject ESCUI;
+    public GameObject Player;
     public Button OKbtn;
     public Camera InGameCamera;
     int gamestop = 0;
@@ -22,19 +22,21 @@ public class EscUI : MonoBehaviour
         {
             if (gamestop == 0)
             {
-                canvas.SetActive(true);
+                ESCUI.SetActive(true);
+                Player.SetActive(false);
                 gamestop++;
                 Time.timeScale = 0;
                 Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
             }
-            else if (Input.GetKeyUp(KeyCode.Escape) && canvas.activeSelf)
+            else if (Input.GetKeyUp(KeyCode.Escape) && ESCUI.activeSelf)
             {
-                canvas.SetActive(false);
+                Player.SetActive(true);
+                ESCUI.SetActive(false);
                 gamestop--;
                 Time.timeScale = 1;
                 InGameCamera.enabled = true;
             }
-
         }
 
 
@@ -57,6 +59,7 @@ public class EscUI : MonoBehaviour
 
     public void OnClickSave()
     {
+        
         ManageData.Instance.SaveGameData();
     }
     public void OnClickLoad()
@@ -65,6 +68,7 @@ public class EscUI : MonoBehaviour
     }
     public void OnClickMainMenu()
     {
+        Debug.Log("타이틀로 이동");
         EndLoading.LoadScene("GameTitle");
     }
 
