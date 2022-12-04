@@ -9,7 +9,7 @@ public class FlashLight : MonoBehaviour
     KeyCode[] KeyCode_List;
     public static bool Flash = false;
     public AudioClip clip;
-
+    
     // Start is called before the first frame update
 
     public void SFXPlay(string sfxName, AudioClip clip)
@@ -30,6 +30,9 @@ public class FlashLight : MonoBehaviour
     void Awake()
     {
         flash_light = GetComponent<Light>();
+        flash_light.innerSpotAngle = 60;
+        flash_light.intensity = 8;
+        //flash_light.
         tr = this.transform;
 
         Key_Depoly();
