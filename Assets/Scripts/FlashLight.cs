@@ -30,8 +30,8 @@ public class FlashLight : MonoBehaviour
     void Awake()
     {
         flash_light = GetComponent<Light>();
-        flash_light.innerSpotAngle = 60;
-        flash_light.intensity = 8;
+        flash_light.innerSpotAngle = 120;
+        flash_light.intensity = 2;
         //flash_light.
         tr = this.transform;
 
