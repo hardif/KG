@@ -1,6 +1,7 @@
 
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 public class EscUI : MonoBehaviour
 {
     public GameObject SetUI;
@@ -9,6 +10,15 @@ public class EscUI : MonoBehaviour
     public Button OKbtn;
     public Camera InGameCamera;
     int gamestop = 0;
+
+    public TMP_Text savebtn;
+    public TMP_Text loadbtn;
+    public TMP_Text setbtn;
+    public TMP_Text mainbtn;
+
+    
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +33,10 @@ public class EscUI : MonoBehaviour
             if (gamestop == 0)
             {
                 ESCUI.SetActive(true);
+                savebtn.color = new Color32(255, 255, 255, 255);
+                loadbtn.color = new Color32(255, 255, 255, 255);
+                setbtn.color = new Color32(255, 255, 255, 255);
+                mainbtn.color = new Color32(255, 255, 255, 255);
                 Player.SetActive(false);
                 gamestop++;
                 Time.timeScale = 0;
