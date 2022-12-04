@@ -12,6 +12,7 @@ public class SoundManager : MonoBehaviour
 
     public Scrollbar audioSlider;
 
+    Gameover go;
     float volume;
     // Start is called before the first frame update
 
@@ -22,6 +23,7 @@ public class SoundManager : MonoBehaviour
         audioMixer.SetFloat("SFX", 20);
     }
     // Update is called once per frame
+
     public void SFXControl()
     {
         volume = audioSlider.value;
@@ -44,6 +46,7 @@ public class SoundManager : MonoBehaviour
     {
         AudioListener.volume = AudioListener.volume == 0 ? 1 : 0;
     }
+
         
     
 }

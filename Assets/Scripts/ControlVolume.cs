@@ -6,7 +6,9 @@ using UnityEngine.UI;
 public class ControlVolume : MonoBehaviour
 {
     // Start is called before the first frame update
+
     public Toggle toggle;
+
     public void ToggleAudioVolume1()
     {
         if (toggle.isOn) AudioListener.volume = 1;
@@ -16,4 +18,6 @@ public class ControlVolume : MonoBehaviour
     {
         AudioListener.volume = AudioListener.volume == 0 ? 1 : 0;
     }
+
+
 }
