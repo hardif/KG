@@ -19,9 +19,7 @@ public class EndLoading : MonoBehaviour
     }
     void Start()
     {
-        
         StartCoroutine(Load());
-
     }
 
     // Update is called once per frame

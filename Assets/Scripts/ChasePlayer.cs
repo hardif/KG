@@ -4,9 +4,11 @@ using UnityEngine;
 using UnityEngine.AI;
 public class ChasePlayer : MonoBehaviour
 {
+    //public GameObject gameover;
     GameObject[] players;
     Transform[] PlayerTrs;
     float[] PlayerAndGhostDist;
+    
 
     private Transform ghostTr;
     private Transform targetTr;
@@ -41,9 +43,12 @@ public class ChasePlayer : MonoBehaviour
     IEnumerator SearchTarget()
     {
         while(true)
-        { 
+        {
+
        
             yield return new WaitForSeconds(0.2f);
+
+
             for (int i=0; i<players.Length;i++)
             {
             PlayerAndGhostDist[i] = Mathf.Abs(Vector3.Distance(PlayerTrs[i].position, transform.position));

@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class ChangeScene : MonoBehaviour
 {
     float timer;
-    int timestart = 0;
+    public int timestart = 0;
     public Button startbtn;
     public Image image;
     [SerializeField]
@@ -25,9 +25,9 @@ public class ChangeScene : MonoBehaviour
     void Update()
     {
         if (timestart == 1){
-            //timer += Time.deltaTime;
-            StartCoroutine(Fade());
+            timer += Time.deltaTime;
             timestart = 0;
+            StartCoroutine(Fade());
         }
     }
     void changeScene()

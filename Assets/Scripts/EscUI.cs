@@ -65,7 +65,7 @@ public class EscUI : MonoBehaviour
     }
     public void OnClickMainMenu()
     {
-
+        EndLoading.LoadScene("GameTitle");
     }
 
 }

@@ -6,6 +6,11 @@ using TMPro;
 
 public class ItemController : MonoBehaviour
 {
+    public GameObject FlashImg;
+    public GameObject RingImg;
+    public GameObject EarplugImg;
+    public GameObject SunImg;
+
 
     FlashLight fl = new FlashLight();
     [SerializeField]
@@ -33,10 +38,25 @@ public class ItemController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             CheckItem();
-            if(hitInfo.transform.GetComponent<ItemPickUp>().item.itemName == "FlashLight")
+            if (hitInfo.transform.GetComponent<ItemPickUp>().item.itemName == "FlashLight")
             {
                 FlashLight.getFlash();
+                FlashImg.SetActive(true);
             }
+            else if (hitInfo.transform.GetComponent<ItemPickUp>().item.itemName == "EarPlug")
+            {
+
+            }
+            else if (hitInfo.transform.GetComponent<ItemPickUp>().item.itemName == "Ring")
+            {
+
+            }
+            else if (hitInfo.transform.GetComponent<ItemPickUp>().item.itemName == "Sunglass")
+            {
+
+            }
+
+
             CanPickUp();
         }
     }
