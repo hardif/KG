@@ -45,13 +45,17 @@ public class ItemController : MonoBehaviour
             }
             else if (hitInfo.transform.GetComponent<ItemPickUp>().item.itemName == "EarPlug")
             {
-
+                EarplugImg.SetActive(true);
             }
             else if (hitInfo.transform.GetComponent<ItemPickUp>().item.itemName == "Ring")
             {
-
+                RingImg.SetActive(true);
             }
             else if (hitInfo.transform.GetComponent<ItemPickUp>().item.itemName == "Sunglass")
+            {
+                SunImg.SetActive(true);
+            }
+            else
             {
 
             }
@@ -78,7 +82,7 @@ public class ItemController : MonoBehaviour
     {
         pickupActivated = true;
         tmp.gameObject.SetActive(true);
-        tmp.text = hitInfo.transform.GetComponent<ItemPickUp>().item.itemName + " Drop " + "<color=yellow>" + "(E)" + "</color>";
+        tmp.text = hitInfo.transform.GetComponent<ItemPickUp>().item.itemName + " Get " + "<color=yellow>" + "(E)" + "</color>";
     }
 
     private void ItemInfoDisappear()

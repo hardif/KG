@@ -7,9 +7,8 @@ public class ChasePlayer : MonoBehaviour
     //public GameObject gameover;
     GameObject[] players;
     Transform[] PlayerTrs;
-    float[] PlayerAndGhostDist;
-    
-
+    float[,] PlayerAndGhostDist;
+    int ghostnum;
     private Transform ghostTr;
     private Transform targetTr;
     private int targetInt = 0;
@@ -19,11 +18,25 @@ public class ChasePlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        string ThisGhost;
+        ThisGhost = this.gameObject.name;
+        if (ThisGhost == "JangSanBum")
+        {
+            ghostnum = 0;
+        }
+        if (ThisGhost == "VirginGhost")
+        {
+            ghostnum = 1;
+        }
+        if (ThisGhost == "Auduksini")
+        {
+            ghostnum = 2;
+        }
         nvAgent = GetComponent<NavMeshAgent>();
 
         players = GameObject.FindGameObjectsWithTag("Player");
         PlayerTrs = new Transform[players.Length];
-        PlayerAndGhostDist = new float[players.Length];
+        PlayerAndGhostDist = new float[3,players.Length];
 
         for(int i=0; i<players.Length;i++)
         {
@@ -46,12 +59,12 @@ public class ChasePlayer : MonoBehaviour
         {
 
        
-            yield return new WaitForSeconds(0.2f);
+            yield return new WaitForSeconds(0.1f);
 
 
             for (int i=0; i<players.Length;i++)
             {
-            PlayerAndGhostDist[i] = Mathf.Abs(Vector3.Distance(PlayerTrs[i].position, transform.position));
+            PlayerAndGhostDist[ghostnum,i] = Mathf.Abs(Vector3.Distance(PlayerTrs[i].position, transform.position));
             }
             targetTr = PlayerTrs[0];
 
@@ -63,7 +76,7 @@ public class ChasePlayer : MonoBehaviour
             {
                 for (int i =0; i<players.Length-1;i++)
                 {
-                    if(PlayerAndGhostDist[targetInt]<= PlayerAndGhostDist[i+1])
+                    if(PlayerAndGhostDist[ghostnum,targetInt] <= PlayerAndGhostDist[ghostnum,i + 1])
                     {
                         targetTr = PlayerTrs[targetInt];
                     }
