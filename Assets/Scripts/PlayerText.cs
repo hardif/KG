@@ -34,10 +34,12 @@ public class PlayerText : MonoBehaviour
                     ptext.text = "무슨 소리지?";
                     break;
                 case 3:
-                    ptext.text = "어질어질하네..";
+                    ptext.text = "어질어질하네..@";
                     break;
                 case 4:
-                    ptext.text = "어디론가 빨려들어가는거같다..";
+                    ptext.text = "어디론가 빨려 들어가는 거 같다..";
+                    break;
+                case 5:
                     playercam.enabled = true;
                     Time.timeScale = 1;
                     txtwin.SetActive(false);
