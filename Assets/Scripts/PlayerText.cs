@@ -4,12 +4,14 @@ using UnityEngine;
 using TMPro;
 public class PlayerText : MonoBehaviour
 {
+    public Camera playercam;
     public TMP_Text ptext;
     private int cnt;
     public GameObject txtwin;
     // Start is called before the first frame update
     void Start()
     {
+        playercam.enabled = false;
         cnt = 0;
         Time.timeScale = 0;
     }
@@ -22,22 +24,23 @@ public class PlayerText : MonoBehaviour
             switch(cnt)
             {
                 case 0:
-                    ptext.text = "1";
+                    ptext.text = "Zzzzzzzz..";
                     break;
                     
                 case 1:
-                    ptext.text = "2";
+                    ptext.text = "...?";
                     break;
                 case 2:
-                    ptext.text = "3";
+                    ptext.text = "무슨 소리지?";
                     break;
                 case 3:
-                    ptext.text = "4";
+                    ptext.text = "정신이 어지럽다..";
                     break;
                 case 4:
-                    ptext.text = "";
-                    txtwin.SetActive(false);
+                    ptext.text = "어디론가 빨려들어가는거같다..";
+                    playercam.enabled = true;
                     Time.timeScale = 1;
+                    txtwin.SetActive(false);
                     break;
             }
             cnt++;
