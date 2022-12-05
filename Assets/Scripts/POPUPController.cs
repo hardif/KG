@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class POPUPController : MonoBehaviour
 {
-    public GameObject[] poparr;
+    private GameObject[] poparr;
+    private GameObject[] ghostarr;
+    public GameObject JSB;
+    public GameObject ADSN;
+    public GameObject VG;
+
+
     public GameObject player;
     public GameObject VGpopup;
     public GameObject ADSNpopup;
@@ -17,23 +23,28 @@ public class POPUPController : MonoBehaviour
     void Start()
     {
         poparr = new GameObject[3];
+        ghostarr = new GameObject[3];
         string ThisGhost;
         ThisGhost = this.gameObject.name;
-        if (ThisGhost == "JangSanBum")
+        if (ThisGhost == "JangSanBum2")
         {
             ghostnum = 0;
         }
-        if (ThisGhost == "VirginGhost")
+        if (ThisGhost == "VirginGhost2")
         {
             ghostnum = 1;
         }
-        if (ThisGhost == "Auduksini")
+        if (ThisGhost == "Auduksini2")
         {
             ghostnum = 2;
         }
         poparr[0] = JSBpopup;
         poparr[1] = VGpopup;
         poparr[2] = ADSNpopup;
+
+        ghostarr[0] = JSB;
+        ghostarr[1] = VG;
+        ghostarr[2] = ADSN;
         player = GameObject.FindGameObjectWithTag("Player");
         playerTrs = player.GetComponent<Transform>();
         PlayerAndGhostDist = new float[3, 1];
@@ -49,18 +60,19 @@ public class POPUPController : MonoBehaviour
         PlayerAndGhostDist[ghostnum, 0] = Mathf.Round(Mathf.Abs(Vector3.Distance(playerTrs.position, this.transform.position)));
         if(PlayerAndGhostDist[ghostnum,0] < 10 && lockenter)
         {
-            onClickPopUp(ghostnum);
+            onClickPopUp(ghostnum); 
 
         }
         if (Input.GetKeyUp(KeyCode.Return) && !lockenter)
         {
             poparr[ghostnum].SetActive(false);
             Time.timeScale = 1;
+            this.gameObject.SetActive(false);
         }
     }
     public void onClickPopUp(int ghostnum)
     {
-        
+        ghostarr[ghostnum].SetActive(true);
         poparr[ghostnum].SetActive(true);
         Time.timeScale = 0;
         lockenter = false;
