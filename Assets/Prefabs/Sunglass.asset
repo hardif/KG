@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e54915e1ec8ef02409ab8a488a1c8f66, type: 3}
   m_Name: Sunglass
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: Sunglass
   itemImage: {fileID: 0}
   itemPrefab: {fileID: 919132149155446097, guid: 1ec180981bd19614384f21f8dfa11102, type: 3}

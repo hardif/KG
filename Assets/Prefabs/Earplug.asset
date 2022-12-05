@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e54915e1ec8ef02409ab8a488a1c8f66, type: 3}
   m_Name: Earplug
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: EarPlug
   itemImage: {fileID: 0}
   itemPrefab: {fileID: 1299866073443476249, guid: abd979013686e144e8cfd58b21ead442, type: 3}

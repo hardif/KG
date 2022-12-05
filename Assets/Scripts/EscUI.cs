@@ -18,7 +18,6 @@ public class EscUI : MonoBehaviour
     public GameObject adsn2;
     public GameObject adsn3;
 
-
     public GameObject flashimg;
     public GameObject earplugimg;
     public GameObject ringimg;
@@ -28,8 +27,7 @@ public class EscUI : MonoBehaviour
     public GameObject VG;
     public GameObject ADSN;
 
-
-
+    public GameObject RealObj;
     public GameObject Player;
     public GameObject SetUI;
     public GameObject ESCUI;
@@ -57,7 +55,7 @@ public class EscUI : MonoBehaviour
             Debug.Log("데이터 로드 성공");
             ManageData.Instance.LoadGameData();
             Time.timeScale = 1;
-            Player.gameObject.transform.position = new Vector3(ManageData.Instance.GetPcoord().x, ManageData.Instance.GetPcoord().y, ManageData.Instance.GetPcoord().z);
+            Player.transform.position = new Vector3(ManageData.Instance.GetPcoord().x, ManageData.Instance.GetPcoord().y, ManageData.Instance.GetPcoord().z);
             Time.timeScale = 0;
 
             TitleInit.Load = false;
@@ -131,6 +129,10 @@ public class EscUI : MonoBehaviour
     }
     public void OnClickMainMenu()
     {
+        gamestop--;
+        PlayerCam.SetActive(true);
+        InGameCamera.enabled = true;
+        ESCUI.SetActive(false);
         Debug.Log("타이틀로 이동");
         EndLoading.LoadScene("GameTitle");
     }

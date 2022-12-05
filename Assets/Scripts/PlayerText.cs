@@ -8,6 +8,9 @@ public class PlayerText : MonoBehaviour
     public TMP_Text ptext;
     private int cnt;
     public GameObject txtwin;
+
+    public GameObject window;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +22,11 @@ public class PlayerText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (TitleInit.Load == true)
+        {
+            window.SetActive(false);
+            Time.timeScale = 1;
+        }
         if (Input.GetKeyDown(KeyCode.Return))
         {
             switch(cnt)
@@ -43,10 +51,13 @@ public class PlayerText : MonoBehaviour
                     playercam.enabled = true;
                     Time.timeScale = 1;
                     txtwin.SetActive(false);
+
+                    
                     break;
             }
             cnt++;
         }
+
 
     }
 }
