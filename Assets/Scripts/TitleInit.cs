@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class TitleInit : MonoBehaviour
 {
+    static public bool Load;
     // Start is called before the first frame update
+
     void Start()
     {
+        Load = false;
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         Time.timeScale = 1;
@@ -16,5 +19,10 @@ public class TitleInit : MonoBehaviour
     void Update()
     {
         
+    }
+    public void IsLoad()
+    {
+        Debug.Log("Load == true");
+        Load = true;
     }
 }

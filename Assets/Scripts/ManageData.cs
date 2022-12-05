@@ -51,5 +51,64 @@ public class ManageData : MonoBehaviour
         
 
     }
+    public void SavePcoord(float x, float y, float z)
+    {
+        data.Pcoord[0] = x;
+        data.Pcoord[1] = y;
+        data.Pcoord[2] = z;
+
+    }
+    public void Isitemactive(bool jsb1, bool jsb2, bool jsb3, bool jsb4, bool vg1, bool vg2, bool vg3, bool vg4, bool adsn1, bool adsn2, bool adsn3)
+    {
+        data.activeitems[0] = jsb1;
+        data.activeitems[1] = jsb2;
+        data.activeitems[2] = jsb3;
+        data.activeitems[3] = jsb4;
+        data.activeitems[4] = vg1;
+        data.activeitems[5] = vg2;
+        data.activeitems[6] = vg3;
+        data.activeitems[7] = vg4;
+        data.activeitems[8] = adsn1;
+        data.activeitems[9] = adsn2;
+        data.activeitems[10] = adsn3;
+
+    }
+    public void Isghostactive(bool JSB, bool VG, bool ADSN)
+    {
+        data.ghost[0] = JSB;
+        data.ghost[1] = VG;
+        data.ghost[2] = ADSN;
+    }
+    public void getghostcoord(Vector3 JSB, Vector3 VG, Vector3 ADSN)
+    {
+        data.ghostcoord[0, 0] = JSB.x;
+        data.ghostcoord[0, 1] = JSB.y;
+        data.ghostcoord[0, 2] = JSB.z;
+        data.ghostcoord[1, 0] = VG.x;
+        data.ghostcoord[1, 1] = VG.y;
+        data.ghostcoord[1, 2] = VG.z;
+        data.ghostcoord[2, 0] = ADSN.x;
+        data.ghostcoord[2, 1] = ADSN.y;
+        data.ghostcoord[2, 2] = ADSN.z;
+    }
+    public void IsUIItemsactive(bool flash, bool earplug, bool ring, bool sunglass)
+    {
+        data.UIItems[0] = flash;
+        data.UIItems[1] = earplug;
+        data.UIItems[2] = ring;
+        data.UIItems[3] = sunglass;
+    }
+
+    public Vector3 GetPcoord()
+    {
+        Vector3 temp;
+        temp.x = data.Pcoord[0];
+        temp.y = data.Pcoord[1];
+        temp.z = data.Pcoord[2];
+
+        return temp;
+
+    }
+
 
 }
