@@ -24,7 +24,7 @@ public class PlayerText : MonoBehaviour
             switch(cnt)
             {
                 case 0:
-                    ptext.text = "Zzzzzzzz..";
+                    ptext.text = "ZZzzzzzzz..";
                     break;
                     
                 case 1:
@@ -34,7 +34,7 @@ public class PlayerText : MonoBehaviour
                     ptext.text = "무슨 소리지?";
                     break;
                 case 3:
-                    ptext.text = "정신이 어지럽다..";
+                    ptext.text = "어질어질하네..";
                     break;
                 case 4:
                     ptext.text = "어디론가 빨려들어가는거같다..";
