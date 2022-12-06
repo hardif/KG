@@ -67,7 +67,6 @@ public class POPUPController : MonoBehaviour
         {
             poparr[ghostnum].SetActive(false);
             Time.timeScale = 1;
-            this.gameObject.SetActive(false);
         }
     }
     public void onClickPopUp(int ghostnum)

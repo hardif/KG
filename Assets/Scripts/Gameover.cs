@@ -5,7 +5,6 @@ using UnityEngine.UI;
 public class Gameover : MonoBehaviour
 {
     public GameObject GameOverUI;
-    public bool Isgameover;
     public Image image;
     AudioSource audioData;
 
@@ -16,6 +15,11 @@ public class Gameover : MonoBehaviour
     public GameObject Ring;
     public GameObject Sunglass;
 
+    public GameObject JangSanBum;
+    public GameObject VirginGhost;
+    public GameObject Aduksini;
+
+
 
     [SerializeField]
     [Range(0.01f, 10f)]
@@ -23,7 +27,6 @@ public class Gameover : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Isgameover = false;
     }
 
     // Update is called once per frame
@@ -40,48 +43,52 @@ public class Gameover : MonoBehaviour
         {
             if(other.gameObject.name == "JangSanBum")
             {
-                if(!Earplug.activeSelf)
+                if(Earplug.activeSelf)
                 {
-                    gameover();
+                    activeJSB.SetActive(false);
+                    JangSanBum.SetActive(false);
+
+
                 }
                 else
                 {
-                    activeJSB.SetActive(false);
-                    other.gameObject.SetActive(false);
+                    gameover();
                 }
 
             }
             if (other.gameObject.name == "VirginGhost")
             {
-                if (!Ring.activeSelf)
+                if (Ring.activeSelf)
                 {
-                    gameover();
+                    activeVG.SetActive(false);
+                    VirginGhost.SetActive(false);
+
+
                 }
                 else
                 {
-                    activeVG.SetActive(false);
-                    other.gameObject.SetActive(false);
+                    gameover();
                 }
 
             }
             if (other.gameObject.name == "Auduksini")
             {
-                if (!Sunglass.activeSelf)
+                if (Sunglass.activeSelf)
                 {
-                    gameover();
+                    activeADSN.SetActive(false);
+                    Aduksini.SetActive(false);
+
                 }
                 else
                 {
-                    activeADSN.SetActive(false);
-                    other.gameObject.SetActive(false);
+                    gameover();
                 }
 
             }
 
 
             OverSound.playsound();
-            StartCoroutine(Fade());
-            Isgameover = true;
+
         }
     }
 
@@ -110,7 +117,6 @@ public class Gameover : MonoBehaviour
     {
         OverSound.playsound();
         StartCoroutine(Fade());
-        Isgameover = true;
     }
 
 }
