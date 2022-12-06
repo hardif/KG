@@ -40,6 +40,29 @@ public class PlayerText : MonoBehaviour
 
     public GameObject window;
 
+    public AudioClip audiozzz;
+    public AudioClip audiojang;
+    AudioSource audioSource;
+
+    private void Awake()
+    {
+        this.audioSource = GetComponent<AudioSource>();
+    }
+
+    void PlaySound(string what)
+    {
+        switch (what)
+        {
+            case "ZZZ":
+                audioSource.clip = audiozzz;
+                break;
+            case "JANG":
+                audioSource.clip = audiojang;
+                break;
+        }
+        audioSource.Play();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -119,10 +142,11 @@ public class PlayerText : MonoBehaviour
             {
                 case 0:
                     ptext.text = "ZZzzzzzzz..";
+                    PlaySound("ZZZ");
                     break;
-                    
                 case 1:
                     ptext.text = "...?";
+                    PlaySound("JANG");
                     break;
                 case 2:
                     ptext.text = "¹«½¼ ¼Ò¸®Áö?";
