@@ -34,7 +34,13 @@ public class Gameover : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            Time.timeScale = 1;
+            EscUI.lockesc = false;
+            txtwin.SetActive(false);
+
+        }
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -48,6 +54,7 @@ public class Gameover : MonoBehaviour
 
                     if(activeJSB.activeSelf || activeVG || activeADSN)
                     {
+                        EscUI.lockesc = true;
                         Time.timeScale = 0;
                         txtwin.SetActive(true);
 
@@ -63,7 +70,7 @@ public class Gameover : MonoBehaviour
                 }
 
             }
-            if (other.gameObject.name == "VirginGhost")
+            else if (other.gameObject.name == "VirginGhost")
             {
                 if (Ring.activeSelf)
                 {
@@ -72,6 +79,7 @@ public class Gameover : MonoBehaviour
 
                     if (activeJSB.activeSelf || activeVG || activeADSN)
                     {
+                        EscUI.lockesc = true;
                         Time.timeScale = 0;
                         txtwin.SetActive(true);
 
@@ -86,7 +94,7 @@ public class Gameover : MonoBehaviour
                 }
 
             }
-            if (other.gameObject.name == "Auduksini")
+            else if (other.gameObject.name == "Auduksini")
             {
                     if (Sunglass.activeSelf)
                     {
@@ -95,6 +103,7 @@ public class Gameover : MonoBehaviour
 
                         if (activeJSB.activeSelf || activeVG || activeADSN)
                         {
+                            EscUI.lockesc = true;
                             Time.timeScale = 0;
                             txtwin.SetActive(true);
 
@@ -107,11 +116,7 @@ public class Gameover : MonoBehaviour
                         gameover();
                     }
             }
-            if (Input.GetKeyDown(KeyCode.Return))
-            {
-                Time.timeScale = 1;
-                txtwin.SetActive(false);
-            }
+
     }
 
     private IEnumerator Fade()
