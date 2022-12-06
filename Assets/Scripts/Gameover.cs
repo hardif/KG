@@ -53,12 +53,6 @@ public class Gameover : MonoBehaviour
 
                         ptext.text = "없어진건가..? ";
 
-                        if (Input.GetKeyDown(KeyCode.Return))
-                        {
-                            Time.timeScale = 1;
-                            txtwin.SetActive(false);
-                        }
-
                     }
 
                 }
@@ -83,12 +77,6 @@ public class Gameover : MonoBehaviour
 
                         ptext.text = "없어진건가..? ";
 
-                        if (Input.GetKeyDown(KeyCode.Return))
-                        {
-                            Time.timeScale = 1;
-                            txtwin.SetActive(false);
-
-                        }
                     }
                 }
                 else
@@ -111,13 +99,6 @@ public class Gameover : MonoBehaviour
                             txtwin.SetActive(true);
 
                             ptext.text = "없어진건가..? ";
-
-                            if (Input.GetKeyDown(KeyCode.Return))
-                            {
-                                Time.timeScale = 1;
-                                txtwin.SetActive(false);
-
-                            }
                         }
                     }
                     else
@@ -125,6 +106,11 @@ public class Gameover : MonoBehaviour
                         EscUI.lockesc = true;
                         gameover();
                     }
+            }
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
+                Time.timeScale = 1;
+                txtwin.SetActive(false);
             }
     }
 
