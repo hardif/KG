@@ -32,7 +32,9 @@ public class PlayerText : MonoBehaviour
             //Time.timeScale = 0;
             Time.timeScale = 1;
             this.gameObject.SetActive(false);
+            Physics.SyncTransforms();
             Player.transform.position = new Vector3(ManageData.Instance.GetPcoord().x, ManageData.Instance.GetPcoord().y, ManageData.Instance.GetPcoord().z);
+            Physics.SyncTransforms();
             Debug.Log(ManageData.Instance.GetPcoord().x);
             playercam.enabled = true;
             TitleInit.Load = false;
