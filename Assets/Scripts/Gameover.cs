@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 public class Gameover : MonoBehaviour
 {
     public GameObject GameOverUI;
@@ -19,6 +20,9 @@ public class Gameover : MonoBehaviour
     public GameObject VirginGhost;
     public GameObject Aduksini;
 
+    public GameObject txtwin;
+    public TMP_Text ptext;
+
     [SerializeField]
     [Range(0.01f, 10f)]
     private float fadetime;
@@ -30,15 +34,10 @@ public class Gameover : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(activeJSB.activeSelf && activeVG.activeSelf && activeADSN.activeSelf)
-        {
-            //게임 엔딩 
-        }
+        
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Ghost")
-        {
             if(other.gameObject.name == "JangSanBum")
             {
                 if(Earplug.activeSelf)
@@ -47,6 +46,20 @@ public class Gameover : MonoBehaviour
                     activeJSB.SetActive(false);
                     JangSanBum.SetActive(false);
 
+                    if(activeJSB.activeSelf || activeVG || activeADSN)
+                    {
+                        Time.timeScale = 0;
+                        txtwin.SetActive(true);
+
+                        ptext.text = "없어진건가..? ";
+
+                        if (Input.GetKeyDown(KeyCode.Return))
+                        {
+                            Time.timeScale = 1;
+                            txtwin.SetActive(false);
+                        }
+
+                    }
 
                 }
                 else
@@ -63,33 +76,62 @@ public class Gameover : MonoBehaviour
                     activeVG.SetActive(false);
                     VirginGhost.SetActive(false);
 
+                    if (activeJSB.activeSelf || activeVG || activeADSN)
+                    {
+                        Time.timeScale = 0;
+                        txtwin.SetActive(true);
 
+                        ptext.text = "없어진건가..? ";
+
+                        if (Input.GetKeyDown(KeyCode.Return))
+                        {
+                            Time.timeScale = 1;
+                            txtwin.SetActive(false);
+
+                        }
+                    }
                 }
                 else
                 {
+                    EscUI.lockesc = true;
                     gameover();
                 }
 
             }
             if (other.gameObject.name == "Auduksini")
             {
-                if (Sunglass.activeSelf)
-                {
-                    activeADSN.SetActive(false);
-                    Aduksini.SetActive(false);
+                    if (Sunglass.activeSelf)
+                    {
+                        activeADSN.SetActive(false);
+                        Aduksini.SetActive(false);
 
-                }
-                else
-                {
-                    gameover();
-                }
+                        if (activeJSB.activeSelf || activeVG || activeADSN)
+                        {
+                            Time.timeScale = 0;
+                            txtwin.SetActive(true);
 
+                            ptext.text = "없어진건가..? ";
+
+                            if (Input.GetKeyDown(KeyCode.Return))
+                            {
+                                Time.timeScale = 1;
+                                txtwin.SetActive(false);
+
+                            }
+                        }
+                    }
+                    else
+                    {
+                        EscUI.lockesc = true;
+                        gameover();
+                    }
+
+
+
+
+            
             }
-
-
             OverSound.playsound();
-
-        }
     }
 
     private IEnumerator Fade()
