@@ -12,6 +12,8 @@ public class ItemController : MonoBehaviour
     public GameObject SunImg;
 
 
+    public AudioSource audiosource;
+
     FlashLight fl = new FlashLight();
     [SerializeField]
     private float range;  // 아이템 습득이 가능한 최대 거리
@@ -27,6 +29,10 @@ public class ItemController : MonoBehaviour
     //private Text actionText;  // 행동을 보여 줄 텍스트
     private TMP_Text tmp;
 
+    private void Start()
+    {
+        audiosource = this.GetComponent<AudioSource>();
+    }
     void Update()
     {
         CheckItem();
@@ -97,6 +103,7 @@ public class ItemController : MonoBehaviour
         {
             if (hitInfo.transform != null)
             {
+                audiosource.Play();
                 Debug.Log(hitInfo.transform.GetComponent<ItemPickUp>().item.itemName + " 획득 했습니다.");  // 인벤토리 넣기
                 Destroy(hitInfo.transform.gameObject);
                 ItemInfoDisappear();
