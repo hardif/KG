@@ -23,22 +23,25 @@ public class Gameover : MonoBehaviour
     public GameObject txtwin;
     public TMP_Text ptext;
 
+    bool closewin;
     [SerializeField]
     [Range(0.01f, 10f)]
     private float fadetime;
     // Start is called before the first frame update
     void Start()
     {
+        closewin = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetKeyDown(KeyCode.Return) && closewin)
         {
             Time.timeScale = 1;
             EscUI.lockesc = false;
             txtwin.SetActive(false);
+            closewin = false;
 
         }
     }
@@ -59,7 +62,7 @@ public class Gameover : MonoBehaviour
                         txtwin.SetActive(true);
 
                         ptext.text = "없어진건가..? ";
-
+                        closewin = true;
                     }
 
                 }
@@ -84,7 +87,7 @@ public class Gameover : MonoBehaviour
                         txtwin.SetActive(true);
 
                         ptext.text = "없어진건가..? ";
-
+                        closewin = true;
                     }
                 }
                 else
@@ -108,6 +111,7 @@ public class Gameover : MonoBehaviour
                             txtwin.SetActive(true);
 
                             ptext.text = "없어진건가..? ";
+                            closewin = true;
                         }
                     }
                     else

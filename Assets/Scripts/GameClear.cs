@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class GameClear : MonoBehaviour
 {
     float timer;
@@ -17,9 +17,23 @@ public class GameClear : MonoBehaviour
 
     public GameObject GameoverUI;
 
+
+    public GameObject Pwin;
+    public TMP_Text ptext;
+
+    public AudioClip audiozzz;
+    public AudioClip audiohue;
+    AudioSource audioSource;
+
+    int cnt;
+    bool isnext;
+    
     private void Start()
     {
+        cnt = 0;
+        isnext = false;
         audiosource = this.GetComponent<AudioSource>();
+        audioSource = this.GetComponent<AudioSource>();
         timer = 0;
         waitingTime = 5;
     }
@@ -28,25 +42,82 @@ public class GameClear : MonoBehaviour
     {
         if(!ClearJSB.activeSelf && !ClearVG.activeSelf && !ClearADSN.activeSelf)
         {
-            //Time.timeScale = 0;
-            audiosource.clip = clip;
-            if (!audiosource.isPlaying)
+            Time.timeScale = 0;
+            Pwin.SetActive(true);
+
+            if(cnt == 0) ptext.text = "(Àá¿¡¼­ ±ú¾î³µ´Ù)";
+
+
+            if (Input.GetKeyDown(KeyCode.Return))
             {
-                audiosource.Play();
+                switch (cnt)
+                {
+                    case 0:
+                        audioSource.clip = audiozzz;
+                        ptext.text = "..Çä...Çä..";
+                        PlaySound("ZZZ");
+                        break;
+                    case 1:
+                        ptext.text = "........";
+                        break;
+                    case 2:
+                        ptext.text = "¿©±â´Â..?";
+                        break;
+                    case 3:
+                        ptext.text = "ÈÞ... ²ÞÀÌ¾ú±¸³ª...";
+                        PlaySound("Hue");
+                        break;
+
+                    case 4:
+                        Time.timeScale = 1;
+                        Pwin.SetActive(false);
+                        isnext = true;
+                        break;
+                }
+                cnt++;
             }
 
 
-            GameoverUI.SetActive(false);
-            timer += Time.deltaTime;
-            ClearUI1.SetActive(true);
-            if(timer > waitingTime)
+
+            if (isnext)
             {
-                ClearUI1.SetActive(false);
-                ClearUI2.SetActive(true);
+                audiosource.clip = clip;
+                if (!audiosource.isPlaying)
+                {
+                    audiosource.Play();
+                }
+
+
+                GameoverUI.SetActive(false);
+                timer += Time.deltaTime;
+                ClearUI1.SetActive(true);
+                if (timer > waitingTime)
+                {
+                    ClearUI1.SetActive(false);
+                    ClearUI2.SetActive(true);
+                }
+                if (timer > 2 * waitingTime) EndLoading.LoadScene("GameTitle");
             }
-            if (timer > 2 * waitingTime) EndLoading.LoadScene("GameTitle");
+
 
 
         }
-    }   
+    }
+
+    void PlaySound(string what)
+    {
+        switch (what)
+        {
+            case "ZZZ":
+                audioSource.clip = audiozzz;
+                break;
+            case "Hue":
+                audioSource.clip = audiohue;
+                break;
+        }
+        if (!audioSource.isPlaying)
+        {
+            audioSource.Play();
+        }
+    }
 }
