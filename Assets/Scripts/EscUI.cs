@@ -85,6 +85,8 @@ public class EscUI : MonoBehaviour
                 ManageData.Instance.SaveGameData();
 
                 ESCUI.SetActive(true);
+                savebtn.color = new Color32(255, 255, 255, 255);
+                loadbtn.color = new Color32(255, 255, 255, 255);
                 setbtn.color = new Color32(255, 255, 255, 255);
                 mainbtn.color = new Color32(255, 255, 255, 255);
                 PlayerCam.SetActive(false);
