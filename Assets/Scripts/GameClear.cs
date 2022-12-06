@@ -6,6 +6,7 @@ public class GameClear : MonoBehaviour
 {
     float timer;
     int waitingTime;
+    public AudioClip clip;
     AudioSource audiosource;
     public GameObject ClearJSB;
     public GameObject ClearVG;
@@ -27,8 +28,14 @@ public class GameClear : MonoBehaviour
     {
         if(!ClearJSB.activeSelf && !ClearVG.activeSelf && !ClearADSN.activeSelf)
         {
-            Time.timeScale = 0;
-            audiosource.Play();
+            //Time.timeScale = 0;
+            audiosource.clip = clip;
+            if (!audiosource.isPlaying)
+            {
+                audiosource.Play();
+            }
+
+
             GameoverUI.SetActive(false);
             timer += Time.deltaTime;
             ClearUI1.SetActive(true);
