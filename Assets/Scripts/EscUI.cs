@@ -44,23 +44,10 @@ public class EscUI : MonoBehaviour
 
 
     // Start is called before the first frame update
-    private void Awake()
-    {
 
-    }
     void Start()
     {
-        if (TitleInit.Load == true)
-        {
-            Debug.Log("데이터 로드 성공");
-            ManageData.Instance.LoadGameData();
-            Time.timeScale = 1;
-            Player.transform.position = new Vector3(ManageData.Instance.GetPcoord().x, ManageData.Instance.GetPcoord().y, ManageData.Instance.GetPcoord().z);
-            Time.timeScale = 0;
 
-            TitleInit.Load = false;
-
-        }
     }
 
     // Update is called once per frame

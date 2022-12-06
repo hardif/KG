@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 public class PlayerText : MonoBehaviour
 {
+    public GameObject Player;
     public Camera playercam;
     public TMP_Text ptext;
     private int cnt;
@@ -24,8 +25,18 @@ public class PlayerText : MonoBehaviour
     {
         if (TitleInit.Load == true)
         {
-            window.SetActive(false);
+
+            Debug.Log("데이터 로드 성공");
+            ManageData.Instance.LoadGameData();
+
+            //Time.timeScale = 0;
             Time.timeScale = 1;
+            this.gameObject.SetActive(false);
+            Player.transform.position = new Vector3(ManageData.Instance.GetPcoord().x, ManageData.Instance.GetPcoord().y, ManageData.Instance.GetPcoord().z);
+            Debug.Log(ManageData.Instance.GetPcoord().x);
+            playercam.enabled = true;
+            TitleInit.Load = false;
+            
         }
         if (Input.GetKeyDown(KeyCode.Return))
         {
