@@ -711,6 +711,10 @@ PrefabInstance:
       propertyPath: titlecamera
       value: 
       objectReference: {fileID: 1315805785}
+    - target: {fileID: 6266014649192838356, guid: bdec00ae307baf8429dfeac452daa133, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ToggleAudioVolume1
+      objectReference: {fileID: 0}
     - target: {fileID: 8014465876120081952, guid: bdec00ae307baf8429dfeac452daa133, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
