@@ -6,14 +6,19 @@ public class GameClear : MonoBehaviour
 {
     float timer;
     int waitingTime;
+    AudioSource audiosource;
     public GameObject ClearJSB;
     public GameObject ClearVG;
     public GameObject ClearADSN;
 
     public GameObject ClearUI1;
     public GameObject ClearUI2;
+
+    public GameObject GameoverUI;
+
     private void Start()
     {
+        audiosource = this.GetComponent<AudioSource>();
         timer = 0;
         waitingTime = 5;
     }
@@ -22,6 +27,9 @@ public class GameClear : MonoBehaviour
     {
         if(!ClearJSB.activeSelf && !ClearVG.activeSelf && !ClearADSN.activeSelf)
         {
+            Time.timeScale = 0;
+            audiosource.Play();
+            GameoverUI.SetActive(false);
             timer += Time.deltaTime;
             ClearUI1.SetActive(true);
             if(timer > waitingTime)
@@ -33,5 +41,5 @@ public class GameClear : MonoBehaviour
 
 
         }
-    }
+    }   
 }
