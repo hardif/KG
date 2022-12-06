@@ -56,7 +56,7 @@ public class EscUI : MonoBehaviour
 
     void Start()
     {
-
+        gamestop = 0;
     }
 
     // Update is called once per frame
@@ -122,18 +122,7 @@ public class EscUI : MonoBehaviour
 
     public void OnClickSave()   
     {
-        /*
-        Vector3 pos = Player.gameObject.transform.position;
-        Vector3 jsbpos = JSB.gameObject.transform.position;
-        Vector3 vgpos = VG.gameObject.transform.position;
-        Vector3 adsnpos = ADSN.gameObject.transform.position;
-        ManageData.Instance.Isghostactive(!isJSBclear.activeSelf, !isVGaclear.activeSelf, !isADSNclear.activeSelf);
-        ManageData.Instance.Isitemactive(jsb1, jsb2, jsb3, jsb4, vg1, vg2, vg3, vg4, adsn1, adsn2, adsn3);
-        ManageData.Instance.setGhostcoord(jsbpos, vgpos, adsnpos);
-        ManageData.Instance.SavePcoord(pos.x, pos.y, pos.z);
-        ManageData.Instance.SaveGameData();
-        Cursor.visible = true;
-        */
+
     }
     public void OnClickLoad()
     {

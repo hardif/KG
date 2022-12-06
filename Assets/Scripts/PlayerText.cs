@@ -25,11 +25,14 @@ public class PlayerText : MonoBehaviour
     public GameObject adsn2;
     public GameObject adsn3;
 
+    public GameObject flash;
+
 
     public GameObject flashimg;
     public GameObject earplugimg;
     public GameObject ringimg;
     public GameObject sunglassimg;
+
 
 
     public GameObject Player;
@@ -95,6 +98,8 @@ public class PlayerText : MonoBehaviour
             ringimg.SetActive(UIimg[2]);
             sunglassimg.SetActive(UIimg[3]);
 
+
+            if(UIimg[0]) flash.SetActive(false);
 
             //가져온 아이템 필드 정보를 적용
 

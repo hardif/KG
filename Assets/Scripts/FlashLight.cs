@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FlashLight : MonoBehaviour
 {
+    public GameObject Flashimg;
     Light flash_light;
     Transform tr;
     KeyCode[] KeyCode_List;
@@ -50,7 +51,7 @@ public class FlashLight : MonoBehaviour
         KeyCode result = User_Input();
         if (result == KeyCode_List[0])
         {
-            if (Flash)
+            if (Flashimg.activeSelf)
             {
                 if (flash_light.enabled)
                     flash_light.enabled = false;
