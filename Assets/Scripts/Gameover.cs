@@ -19,8 +19,6 @@ public class Gameover : MonoBehaviour
     public GameObject VirginGhost;
     public GameObject Aduksini;
 
-
-
     [SerializeField]
     [Range(0.01f, 10f)]
     private float fadetime;
@@ -45,6 +43,7 @@ public class Gameover : MonoBehaviour
             {
                 if(Earplug.activeSelf)
                 {
+
                     activeJSB.SetActive(false);
                     JangSanBum.SetActive(false);
 
@@ -52,6 +51,7 @@ public class Gameover : MonoBehaviour
                 }
                 else
                 {
+                    EscUI.lockesc = true;
                     gameover();
                 }
 

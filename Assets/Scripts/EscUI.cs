@@ -11,6 +11,7 @@ public class EscUI : MonoBehaviour
 
     AudioListener al;
 
+    public GameObject PlayerUI;
 
     public GameObject jsb1;
     public GameObject jsb2;
@@ -40,6 +41,7 @@ public class EscUI : MonoBehaviour
     public Button OKbtn;
     public Camera InGameCamera;
     int gamestop = 0;
+    public static bool lockesc;
 
     public TMP_Text savebtn;
     public TMP_Text loadbtn;
@@ -56,14 +58,16 @@ public class EscUI : MonoBehaviour
 
     void Start()
     {
+        lockesc = false;
         gamestop = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Escape))
+        if (Input.GetKeyUp(KeyCode.Escape) && !lockesc)
         {
+            
             if (gamestop == 0)
             {
                 
@@ -86,6 +90,7 @@ public class EscUI : MonoBehaviour
                 setbtn.color = new Color32(255, 255, 255, 255);
                 mainbtn.color = new Color32(255, 255, 255, 255);
                 PlayerCam.SetActive(false);
+                PlayerUI.SetActive(false);
                 gamestop++;
                 Time.timeScale = 0;
                 Cursor.lockState = CursorLockMode.None;
@@ -96,6 +101,7 @@ public class EscUI : MonoBehaviour
             {
                 PlayerCam.SetActive(true);
                 ESCUI.SetActive(false);
+                PlayerUI.SetActive(true);
                 gamestop--;
                 Time.timeScale = 1;
                 InGameCamera.enabled = true;
