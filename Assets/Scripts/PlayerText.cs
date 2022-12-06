@@ -112,7 +112,10 @@ public class PlayerText : MonoBehaviour
             adsn2.SetActive(fielditem[9]);
             adsn3.SetActive(fielditem[10]);
 
-
+            //귀신 액티브 정보를 적용
+            JangSanBum.SetActive(ManageData.Instance.GetGhostactive()[0]);
+            VirginGhost.SetActive(ManageData.Instance.GetGhostactive()[1]);
+            Aduksini.SetActive(ManageData.Instance.GetGhostactive()[2]);
 
 
 

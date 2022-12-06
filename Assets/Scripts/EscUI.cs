@@ -9,6 +9,9 @@ public class EscUI : MonoBehaviour
     public GameObject isADSNclear;
 
 
+    AudioListener al;
+
+
     public GameObject jsb1;
     public GameObject jsb2;
     public GameObject jsb3;
@@ -47,6 +50,8 @@ public class EscUI : MonoBehaviour
     Vector3 jsbpos;
     Vector3 vgpos;
     Vector3 adsnpos;
+
+
     // Start is called before the first frame update
 
     void Start()
@@ -61,14 +66,15 @@ public class EscUI : MonoBehaviour
         {
             if (gamestop == 0)
             {
-
+                
 
                 Vector3 pos = Player.gameObject.transform.position;
                 if (JSB.activeSelf) { jsbpos = JSB.gameObject.transform.position; }
                 if (VG.activeSelf) { vgpos = VG.gameObject.transform.position; }
                 if (ADSN.activeSelf) { adsnpos = ADSN.gameObject.transform.position; }
                 ManageData.Instance.IsUIItemsactive(flashimg.activeSelf, earplugimg.activeSelf, ringimg.activeSelf, sunglassimg.activeSelf);
-                ManageData.Instance.Isghostactive(!isJSBclear.activeSelf, !isVGaclear.activeSelf, !isADSNclear.activeSelf);
+                ManageData.Instance.setghostclear(!isJSBclear.activeSelf, !isVGaclear.activeSelf, !isADSNclear.activeSelf);
+                ManageData.Instance.setghostactive(JSB.activeSelf, VG.activeSelf, ADSN.activeSelf);
                 ManageData.Instance.Isitemactive(jsb1, jsb2, jsb3, jsb4, vg1, vg2, vg3, vg4, adsn1, adsn2, adsn3);
                 ManageData.Instance.setGhostcoord(jsbpos, vgpos, adsnpos);
                 ManageData.Instance.SavePcoord(pos.x, pos.y, pos.z);

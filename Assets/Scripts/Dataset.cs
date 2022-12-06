@@ -12,5 +12,6 @@ public class DataSet
     public bool[] activeitems = new bool[11];
     public bool[] ghost = new bool[3];
     public float[,] ghostcoord = new float[3, 3];
+    public bool[] ghostactive = new bool[3];
 
 }

@@ -73,7 +73,7 @@ public class ManageData : MonoBehaviour
         data.activeitems[10] = adsn3;
 
     }
-    public void Isghostactive(bool JSB, bool VG, bool ADSN)
+    public void setghostclear(bool JSB, bool VG, bool ADSN)
     {
         data.ghost[0] = JSB;
         data.ghost[1] = VG;
@@ -99,6 +99,13 @@ public class ManageData : MonoBehaviour
         data.UIItems[3] = sunglass;
     }
 
+    public void setghostactive(bool JSBact, bool VGact, bool ADSNact)
+    {
+        data.ghostactive[0] = JSBact;
+        data.ghostactive[1] = VGact;
+        data.ghostactive[1] = ADSNact;
+    }
+
     public float[] GetPcoord()
     {
 
@@ -120,6 +127,10 @@ public class ManageData : MonoBehaviour
     public bool[] GetGhostClear()
     {
         return data.ghost;
+    }
+    public bool[] GetGhostactive()
+    {
+        return data.ghostactive;
     }
 
 }
