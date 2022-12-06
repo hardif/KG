@@ -79,7 +79,7 @@ public class ManageData : MonoBehaviour
         data.ghost[1] = VG;
         data.ghost[2] = ADSN;
     }
-    public void getghostcoord(Vector3 JSB, Vector3 VG, Vector3 ADSN)
+    public void setGhostcoord(Vector3 JSB, Vector3 VG, Vector3 ADSN)
     {
         data.ghostcoord[0, 0] = JSB.x;
         data.ghostcoord[0, 1] = JSB.y;
@@ -99,16 +99,27 @@ public class ManageData : MonoBehaviour
         data.UIItems[3] = sunglass;
     }
 
-    public Vector3 GetPcoord()
+    public float[] GetPcoord()
     {
-        Vector3 temp;
-        temp.x = data.Pcoord[0];
-        temp.y = data.Pcoord[1];
-        temp.z = data.Pcoord[2];
 
-        return temp;
+        return data.Pcoord;
 
     }
-
+    public bool[] GetUIitemactive()
+    {
+        return data.UIItems;
+    }
+    public bool[] GetFieldItemactive()
+    {   
+        return data.activeitems;
+    }
+    public float[,] GetGhostCoord()
+    {
+        return data.ghostcoord;
+    }
+    public bool[] GetGhostClear()
+    {
+        return data.ghost;
+    }
 
 }

@@ -8,7 +8,14 @@ public class Gameover : MonoBehaviour
     public bool Isgameover;
     public Image image;
     AudioSource audioData;
-    
+
+    public GameObject activeJSB;
+    public GameObject activeVG;
+    public GameObject activeADSN;
+    public GameObject Earplug;
+    public GameObject Ring;
+    public GameObject Sunglass;
+
 
     [SerializeField]
     [Range(0.01f, 10f)]
@@ -22,12 +29,56 @@ public class Gameover : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(activeJSB.activeSelf && activeVG.activeSelf && activeADSN.activeSelf)
+        {
+            //게임 엔딩 
+        }
     }
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "Ghost")
         {
+            if(other.gameObject.name == "JangSanBum")
+            {
+                if(!Earplug.activeSelf)
+                {
+                    gameover();
+                }
+                else
+                {
+                    activeJSB.SetActive(false);
+                    other.gameObject.SetActive(false);
+                }
+
+            }
+            if (other.gameObject.name == "VirginGhost")
+            {
+                if (!Ring.activeSelf)
+                {
+                    gameover();
+                }
+                else
+                {
+                    activeVG.SetActive(false);
+                    other.gameObject.SetActive(false);
+                }
+
+            }
+            if (other.gameObject.name == "Auduksini")
+            {
+                if (!Sunglass.activeSelf)
+                {
+                    gameover();
+                }
+                else
+                {
+                    activeADSN.SetActive(false);
+                    other.gameObject.SetActive(false);
+                }
+
+            }
+
+
             OverSound.playsound();
             StartCoroutine(Fade());
             Isgameover = true;
@@ -54,4 +105,12 @@ public class Gameover : MonoBehaviour
         }
         EndLoading.LoadScene("GameTitle");
     }
+
+    private void gameover()
+    {
+        OverSound.playsound();
+        StartCoroutine(Fade());
+        Isgameover = true;
+    }
+
 }

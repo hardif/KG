@@ -4,7 +4,10 @@ using UnityEngine.UI;
 using TMPro;
 public class EscUI : MonoBehaviour
 {
-    
+    public GameObject isJSBclear;
+    public GameObject isVGaclear;
+    public GameObject isADSNclear;
+
 
     public GameObject jsb1;
     public GameObject jsb2;
@@ -103,9 +106,9 @@ public class EscUI : MonoBehaviour
         Vector3 jsbpos = JSB.gameObject.transform.position;
         Vector3 vgpos = VG.gameObject.transform.position;
         Vector3 adsnpos = ADSN.gameObject.transform.position;
-        ManageData.Instance.Isghostactive(JSB.activeSelf, VG.activeSelf, ADSN.activeSelf);
+        ManageData.Instance.Isghostactive(!isJSBclear.activeSelf, !isVGaclear.activeSelf, !isADSNclear.activeSelf);
         ManageData.Instance.Isitemactive(jsb1, jsb2, jsb3, jsb4, vg1, vg2, vg3, vg4, adsn1, adsn2, adsn3);
-        ManageData.Instance.getghostcoord(jsbpos, vgpos, adsnpos);
+        ManageData.Instance.setGhostcoord(jsbpos, vgpos, adsnpos);
         ManageData.Instance.SavePcoord(pos.x, pos.y, pos.z);
         ManageData.Instance.SaveGameData();
         Cursor.visible = true;
