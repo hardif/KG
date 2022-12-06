@@ -125,13 +125,7 @@ public class Gameover : MonoBehaviour
                         EscUI.lockesc = true;
                         gameover();
                     }
-
-
-
-
-            
             }
-            OverSound.playsound();
     }
 
     private IEnumerator Fade()
