@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.IO;
 
 public class ChangeScene : MonoBehaviour
 {
@@ -24,7 +25,18 @@ public class ChangeScene : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (timestart == 1){
+        if(startbtn.gameObject.name == "loadbtn" && timestart == 1)
+        {
+            string GameDataFileName = "GameData.json";
+            string filePath = Application.persistentDataPath + "/" + GameDataFileName;
+            if (File.Exists(filePath))
+            {
+                timer += Time.deltaTime;
+                timestart = 0;
+                StartCoroutine(Fade());
+            }
+        }
+        else if (timestart == 1){
             timer += Time.deltaTime;
             timestart = 0;
             StartCoroutine(Fade());
