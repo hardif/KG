@@ -12,9 +12,8 @@ public class ItemController : MonoBehaviour
     public GameObject SunImg;
 
 
-    public AudioSource audiosource;
+    AudioSource audiosource;
 
-    FlashLight fl = new FlashLight();
     [SerializeField]
     private float range;  // 아이템 습득이 가능한 최대 거리
 

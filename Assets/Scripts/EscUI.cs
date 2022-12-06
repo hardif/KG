@@ -43,8 +43,6 @@ public class EscUI : MonoBehaviour
     int gamestop = 0;
     public static bool lockesc;
 
-    public TMP_Text savebtn;
-    public TMP_Text loadbtn;
     public TMP_Text setbtn;
     public TMP_Text mainbtn;
 
@@ -60,6 +58,8 @@ public class EscUI : MonoBehaviour
     {
         lockesc = false;
         gamestop = 0;
+        ESCUI.SetActive(false);
+        Cursor.lockState = CursorLockMode.None;
     }
 
     // Update is called once per frame
@@ -85,8 +85,6 @@ public class EscUI : MonoBehaviour
                 ManageData.Instance.SaveGameData();
 
                 ESCUI.SetActive(true);
-                savebtn.color = new Color32(255, 255, 255, 255);
-                loadbtn.color = new Color32(255, 255, 255, 255);
                 setbtn.color = new Color32(255, 255, 255, 255);
                 mainbtn.color = new Color32(255, 255, 255, 255);
                 PlayerCam.SetActive(false);
