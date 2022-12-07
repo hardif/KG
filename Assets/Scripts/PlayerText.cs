@@ -123,7 +123,9 @@ public class PlayerText : MonoBehaviour
             Vector3[] gcoord = new Vector3[3];
             gcoord = ManageData.Instance.GetGhostCoord();
             JangSanBum.transform.position = gcoord[0];
+            Physics.SyncTransforms();
             VirginGhost.transform.position = gcoord[1];
+            Physics.SyncTransforms();
             Aduksini.transform.position = gcoord[2];
             Physics.SyncTransforms();
 

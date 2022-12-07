@@ -25,6 +25,8 @@ public class GameClear : MonoBehaviour
     public AudioClip audiohue;
     AudioSource audioSource;
 
+    public GameObject ItemUIs;
+
     int cnt;
     bool isnext;
     
@@ -48,8 +50,9 @@ public class GameClear : MonoBehaviour
             Pwin.SetActive(true);
 
             dreamwin.SetActive(false);
+            ItemUIs.SetActive(false);
 
-            
+
 
 
             if (Input.GetKeyDown(KeyCode.Return))

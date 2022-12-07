@@ -73,7 +73,11 @@ public class POPUPController : MonoBehaviour
     {
         if (!ghostarr[ghostnum].activeSelf) poparr[ghostnum].SetActive(true);
         ghostarr[ghostnum].SetActive(true);
-        Time.timeScale = 0;
+        if(lockenter)
+        {
+            Time.timeScale = 0;
+        }
+
         lockenter = false;
         //Cursor.lockState = CursorLockMode.None;
         //Cursor.visible = false;

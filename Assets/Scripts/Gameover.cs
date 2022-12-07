@@ -23,6 +23,9 @@ public class Gameover : MonoBehaviour
     public GameObject txtwin;
     public TMP_Text ptext;
 
+    public AudioClip clip;
+    AudioSource audiosource;
+
     bool closewin;
     [SerializeField]
     [Range(0.01f, 10f)]
@@ -30,6 +33,7 @@ public class Gameover : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        audiosource = this.GetComponent<AudioSource>();
         closewin = false;
     }
 
@@ -57,6 +61,8 @@ public class Gameover : MonoBehaviour
 
                     if(activeJSB.activeSelf || activeVG || activeADSN)
                     {
+                        audiosource.clip = clip;
+                        audiosource.Play();
                         EscUI.lockesc = true;
                         Time.timeScale = 0;
                         txtwin.SetActive(true);
@@ -82,6 +88,8 @@ public class Gameover : MonoBehaviour
 
                     if (activeJSB.activeSelf || activeVG || activeADSN)
                     {
+                        audiosource.clip = clip;
+                        audiosource.Play();
                         EscUI.lockesc = true;
                         Time.timeScale = 0;
                         txtwin.SetActive(true);
@@ -106,6 +114,8 @@ public class Gameover : MonoBehaviour
 
                         if (activeJSB.activeSelf || activeVG || activeADSN)
                         {
+                            audiosource.clip = clip;
+                            audiosource.Play();
                             EscUI.lockesc = true;
                             Time.timeScale = 0;
                             txtwin.SetActive(true);

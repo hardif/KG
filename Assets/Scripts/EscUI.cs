@@ -74,9 +74,9 @@ public class EscUI : MonoBehaviour
                 
 
                 Vector3 pos = Player.gameObject.transform.position;
-                if (JSB.activeSelf) { jsbpos = JSB.gameObject.transform.position; }
-                if (VG.activeSelf) { vgpos = VG.gameObject.transform.position; }
-                if (ADSN.activeSelf) { adsnpos = ADSN.gameObject.transform.position; }
+                jsbpos = JSB.gameObject.transform.position;
+                vgpos = VG.gameObject.transform.position;
+                adsnpos = ADSN.gameObject.transform.position; 
                 ManageData.Instance.IsUIItemsactive(flashimg.activeSelf, earplugimg.activeSelf, ringimg.activeSelf, sunglassimg.activeSelf);
                 ManageData.Instance.setghostclear(!isJSBclear.activeSelf, !isVGaclear.activeSelf, !isADSNclear.activeSelf);
                 ManageData.Instance.setghostactive(JSB.activeSelf, VG.activeSelf, ADSN.activeSelf);
