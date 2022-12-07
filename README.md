@@ -1,6 +1,7 @@
 # 오픈소스 프로젝트 KG
 ## 한국의 귀신을 활용한 공포게임
 
+https://www.youtube.com/watch?v=e0kNAENN41g
 
 오픈소스 프로젝트 KG에서 만든 한국의 귀신을 활용한 공포게임입니다.
 
