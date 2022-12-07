@@ -16,19 +16,20 @@ https://www.youtube.com/watch?v=e0kNAENN41g
   + ESC : 자동저장 / 환경설정 / 메인메뉴
 
 
-------------
+
 세이브 파일 경로 : C:\Users\[user name]\AppData\LocalLow\[Kumoh Gaming]\[ESKG]
------------
+
 
 + 사용한 asset
-  + Asset Store / Standard Assets 2018.4 - Version.1.1.6
+  + Asset Store / Standard Assets 2018.4 - Version.1.1.6 
+    +   
   + sketchfab / Scary Ghost by LordDiego
   + sketchfab / Samara (The Ring) by CoryRichards  
   + sketchfab / Rose by Heliona 
   + sketchfab / #3December - Earmuffs by P3TroV
   + sketchfab / Love neon sign - wall by daysena 
-  + sketchfab / 
-  + sketchfab / 
+  + sketchfab / Meat Hook by Artise1
+  + sketchfab / Dried_Meat by carlos.moreno.g
   + sketchfab / 
 사용한 이미지 출처
 손전등 : Pngimg.com
