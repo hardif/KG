@@ -103,7 +103,7 @@ public class ManageData : MonoBehaviour
     {
         data.ghostactive[0] = JSBact;
         data.ghostactive[1] = VGact;
-        data.ghostactive[1] = ADSNact;
+        data.ghostactive[2] = ADSNact;
     }
 
     public float[] GetPcoord()
