@@ -8,7 +8,6 @@ https://www.youtube.com/watch?v=e0kNAENN41g
 
 
 ----------------------------------
-
 + 게임 조작법
   + 캐릭터 이동 : WSAD
   + E :  아이템 습득
