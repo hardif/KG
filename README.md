@@ -3,7 +3,7 @@
 
 https://www.youtube.com/watch?v=e0kNAENN41g
 
-오픈소스 프로젝트 팀 KG에서 만든 한국의 귀신을 활용한 공포게임입니다.
+오픈소스 프로젝트 팀 KG에서 만든 공포게임입니다.
 
 
 
