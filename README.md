@@ -20,6 +20,7 @@ https://www.youtube.com/watch?v=e0kNAENN41g
 ## 필요성
 타 장르에 비해 보다 몰입감이 있는 공포게임에 한국 귀신을 활용하여, 외국인뿐만이 아니라 한국인에게도 게임을 하며 한국 귀신에 흥미를 가질 수 있게 한다. 
 
+-----
 
 
 
@@ -29,6 +30,8 @@ https://www.youtube.com/watch?v=e0kNAENN41g
   + F : 손전등 ON/OFF (습득했을 시)
   + ESC : 자동저장 / 환경설정 / 메인메뉴
 
+
+-----
 
 
 세이브 파일 경로 : C:\Users\[user name]\AppData\LocalLow\[Kumoh Gaming]\[ESKG]
