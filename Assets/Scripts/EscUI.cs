@@ -118,9 +118,6 @@ public class EscUI : MonoBehaviour
     {
         SetUI.SetActive(true);
         ESCUI.SetActive(false);
-        InGameCamera.enabled = false;
-
-
 
     }
     public void OffSettings()

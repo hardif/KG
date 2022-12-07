@@ -14,10 +14,12 @@ public class ChasePlayer : MonoBehaviour
     private int targetInt = 0;
 
     private NavMeshAgent nvAgent;
+    AudioSource audio;
 
     // Start is called before the first frame update
     void Start()
     {
+        audio = this.GetComponent<AudioSource>();
         string ThisGhost;
         ThisGhost = this.gameObject.name;
         if (ThisGhost == "JangSanBum")
@@ -57,8 +59,18 @@ public class ChasePlayer : MonoBehaviour
     {
         while(true)
         {
+            PlayerAndGhostDist[ghostnum, 0] = Mathf.Abs(Vector3.Distance(PlayerTrs[0].position, transform.position));
 
-       
+            if (PlayerAndGhostDist[ghostnum,0] <10)
+            {
+                if(!audio.isPlaying)
+                {
+                    audio.Play();
+                }
+                
+            }
+
+
             yield return new WaitForSeconds(0.1f);
 
 

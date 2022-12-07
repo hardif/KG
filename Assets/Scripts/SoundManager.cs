@@ -18,9 +18,9 @@ public class SoundManager : MonoBehaviour
 
     void Start()
     {
-        audioMixer.SetFloat("BGM", 20);
+        audioMixer.SetFloat("BGM", 0);
         audioMixer.SetFloat("Master", 0);
-        audioMixer.SetFloat("SFX", 20);
+        audioMixer.SetFloat("SFX", 0);
     }
     // Update is called once per frame
 

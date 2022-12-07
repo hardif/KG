@@ -224,6 +224,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &116536972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116536965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b4e3794d85291943a6161ffa8e9f34b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMixer: {fileID: 24100000, guid: 28e54ec149952e44da115e98073b89d4, type: 2}
+  audioSlider: {fileID: 0}
 --- !u!1 &702909833
 GameObject:
   m_ObjectHideFlags: 0
@@ -1103,7 +1117,7 @@ AudioSource:
   m_GameObject: {fileID: 6876963314741264112}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 1470977146643452995, guid: 28e54ec149952e44da115e98073b89d4, type: 2}
   m_audioClip: {fileID: 8300000, guid: d8cb45d57dca9674d91e62920b97aaf0, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1

@@ -48,24 +48,22 @@ public class ItemController : MonoBehaviour
                 FlashLight.getFlash();
                 FlashImg.SetActive(true);
             }
-            else if (hitInfo.transform.GetComponent<ItemPickUp>().item.itemName == "EarPlug")
+            else { }
+            if (hitInfo.transform.GetComponent<ItemPickUp>().item.itemName == "EarPlug")
             {
                 EarplugImg.SetActive(true);
             }
-            else if (hitInfo.transform.GetComponent<ItemPickUp>().item.itemName == "Ring")
+            else { }
+            if (hitInfo.transform.GetComponent<ItemPickUp>().item.itemName == "Ring")
             {
                 RingImg.SetActive(true);
             }
-            else if (hitInfo.transform.GetComponent<ItemPickUp>().item.itemName == "Sunglass")
+            else { }
+            if (hitInfo.transform.GetComponent<ItemPickUp>().item.itemName == "Sunglass")
             {
                 SunImg.SetActive(true);
             }
-            else
-            {
-
-            }
-
-
+            else { }
             CanPickUp();
         }
     }
