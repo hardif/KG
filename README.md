@@ -22,7 +22,7 @@ https://www.youtube.com/watch?v=e0kNAENN41g
 
 + 사용한 asset
   + Asset Store / Standard Assets 2018.4 - Version.1.1.6 
-    + fist
+    + firstpersoncharactercontroller
   + sketchfab / Scary Ghost by LordDiego
   + sketchfab / Samara (The Ring) by CoryRichards  
   + sketchfab / Rose by Heliona 
