@@ -26,10 +26,10 @@ https://www.youtube.com/watch?v=e0kNAENN41g
 
 + 게임 설명서
   + 타이틀 화면 
-  + WSAD : 캐릭터 이동
-  + E :  아이템 습득
-  + F : 손전등 ON/OFF (습득했을 시)
-  + ESC : 자동저장 / 환경설정 / 메인메뉴
+   + WSAD : 캐릭터 이동
+   + E :  아이템 습득
+   + F : 손전등 ON/OFF (습득했을 시)
+   + ESC : 자동저장 / 환경설정 / 메인메뉴
 
 
 
