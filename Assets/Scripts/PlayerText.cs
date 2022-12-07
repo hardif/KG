@@ -125,13 +125,13 @@ public class PlayerText : MonoBehaviour
 
 
             //가져온 귀신 좌표 정보를 적용
-            float [,] gcoord = new float[3, 3];
+            Vector3 [] gcoord = new Vector3[3];
             gcoord = ManageData.Instance.GetGhostCoord();
-            JangSanBum.transform.position = new Vector3(gcoord[0, 0], gcoord[0, 1], gcoord[0, 2]);
+            JangSanBum.transform.position = gcoord[0];
             Physics.SyncTransforms();
-            VirginGhost.transform.position = new Vector3(gcoord[1, 0], gcoord[1, 1], gcoord[1, 2]);
+            VirginGhost.transform.position = gcoord[1];
             Physics.SyncTransforms();
-            Aduksini.transform.position = new Vector3(gcoord[2, 0], gcoord[2, 1], gcoord[2, 2]);
+            Aduksini.transform.position = gcoord[2];
             Physics.SyncTransforms();
 
 

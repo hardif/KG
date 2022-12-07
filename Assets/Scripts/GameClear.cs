@@ -44,11 +44,12 @@ public class GameClear : MonoBehaviour
         {
             EscUI.lockesc = true;
             Time.timeScale = 0;
+            if (cnt == 0) ptext.text = "(Àá¿¡¼­ ±ú¾î³µ´Ù)";
             Pwin.SetActive(true);
 
             dreamwin.SetActive(false);
 
-            if (cnt == 0) ptext.text = "(Àá¿¡¼­ ±ú¾î³µ´Ù)";
+            
 
 
             if (Input.GetKeyDown(KeyCode.Return))

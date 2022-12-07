@@ -81,16 +81,11 @@ public class ManageData : MonoBehaviour
     }
     public void setGhostcoord(Vector3 JSB, Vector3 VG, Vector3 ADSN)
     {
-        data.ghostcoord[0, 0] = JSB.x;
-        data.ghostcoord[0, 1] = JSB.y;
-        data.ghostcoord[0, 2] = JSB.z;
-        data.ghostcoord[1, 0] = VG.x;
-        data.ghostcoord[1, 1] = VG.y;
-        data.ghostcoord[1, 2] = VG.z;
-        data.ghostcoord[2, 0] = ADSN.x;
-        data.ghostcoord[2, 1] = ADSN.y;
-        data.ghostcoord[2, 2] = ADSN.z;
+        data.ghostcoord[0] = JSB;
+        data.ghostcoord[1] = VG;
+        data.ghostcoord[2] = ADSN;
     }
+
     public void IsUIItemsactive(bool flash, bool earplug, bool ring, bool sunglass)
     {
         data.UIItems[0] = flash;
@@ -120,7 +115,7 @@ public class ManageData : MonoBehaviour
     {   
         return data.activeitems;
     }
-    public float[,] GetGhostCoord()
+    public Vector3[] GetGhostCoord()
     {
         return data.ghostcoord;
     }
