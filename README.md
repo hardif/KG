@@ -1,4 +1,4 @@
-#오픈소스 프로젝트 KG
+# 오픈소스 프로젝트 KG
 ## 한국의 귀신을 활용한 공포게임
 
 
@@ -9,7 +9,8 @@
 
 
 
-세이브 파일 경로 : C:\Users\[user name]\AppData\LocalLow\[company name]\[product name]
+
+세이브 파일 경로 : C:\Users\[user name]\AppData\LocalLow\[Kumoh Gaming]\[ESKG]
 
 
 
