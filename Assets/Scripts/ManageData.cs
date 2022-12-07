@@ -75,9 +75,9 @@ public class ManageData : MonoBehaviour
     }
     public void setghostclear(bool JSB, bool VG, bool ADSN)
     {
-        data.ghost[0] = JSB;
-        data.ghost[1] = VG;
-        data.ghost[2] = ADSN;
+        data.ghostclear[0] = JSB;
+        data.ghostclear[1] = VG;
+        data.ghostclear[2] = ADSN;
     }
     public void setGhostcoord(Vector3 JSB, Vector3 VG, Vector3 ADSN)
     {
@@ -126,7 +126,7 @@ public class ManageData : MonoBehaviour
     }
     public bool[] GetGhostClear()
     {
-        return data.ghost;
+        return data.ghostclear;
     }
     public bool[] GetGhostactive()
     {

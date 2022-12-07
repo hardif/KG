@@ -17,7 +17,7 @@ public class GameClear : MonoBehaviour
 
     public GameObject GameoverUI;
 
-
+    public GameObject dreamwin;
     public GameObject Pwin;
     public TMP_Text ptext;
 
@@ -46,7 +46,9 @@ public class GameClear : MonoBehaviour
             Time.timeScale = 0;
             Pwin.SetActive(true);
 
-            if(cnt == 0) ptext.text = "(Àá¿¡¼­ ±ú¾î³µ´Ù)";
+            dreamwin.SetActive(false);
+
+            if (cnt == 0) ptext.text = "(Àá¿¡¼­ ±ú¾î³µ´Ù)";
 
 
             if (Input.GetKeyDown(KeyCode.Return))

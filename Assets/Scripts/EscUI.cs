@@ -78,7 +78,7 @@ public class EscUI : MonoBehaviour
                 if (VG.activeSelf) { vgpos = VG.gameObject.transform.position; }
                 if (ADSN.activeSelf) { adsnpos = ADSN.gameObject.transform.position; }
                 ManageData.Instance.IsUIItemsactive(flashimg.activeSelf, earplugimg.activeSelf, ringimg.activeSelf, sunglassimg.activeSelf);
-                ManageData.Instance.setghostclear(isJSBclear.activeSelf, isVGaclear.activeSelf, isADSNclear.activeSelf);
+                ManageData.Instance.setghostclear(!isJSBclear.activeSelf, !isVGaclear.activeSelf, !isADSNclear.activeSelf);
                 ManageData.Instance.setghostactive(JSB.activeSelf, VG.activeSelf, ADSN.activeSelf);
                 ManageData.Instance.Isitemactive(jsb1, jsb2, jsb3, jsb4, vg1, vg2, vg3, vg4, adsn1, adsn2, adsn3);
                 ManageData.Instance.setGhostcoord(jsbpos, vgpos, adsnpos);

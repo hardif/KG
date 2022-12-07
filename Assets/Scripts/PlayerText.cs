@@ -137,9 +137,9 @@ public class PlayerText : MonoBehaviour
 
 
             //가져온 귀신 클리어 정보를 적용
-            isJSBclear.SetActive(ManageData.Instance.GetGhostClear()[0]);
-            isVGaclear.SetActive(ManageData.Instance.GetGhostClear()[1]);
-            isADSNclear.SetActive(ManageData.Instance.GetGhostClear()[2]);
+            isJSBclear.SetActive(!ManageData.Instance.GetGhostClear()[0]);
+            isVGaclear.SetActive(!ManageData.Instance.GetGhostClear()[1]);
+            isADSNclear.SetActive(!ManageData.Instance.GetGhostClear()[2]);
             Time.timeScale = 1;
             txtwin.SetActive(false);
             playercam.enabled = true;
