@@ -39,10 +39,9 @@ https://www.youtube.com/watch?v=e0kNAENN41g
 + 게임 목표
 	+ 각 귀신에 맞는 아이템을 모아 탈출
 
-------
 
 
-세이브 파일 경로 : C:\Users\[user name]\AppData\LocalLow\[Kumoh Gaming]\[ESKG]
++ 세이브 파일 경로 : C:\Users\[user name]\AppData\LocalLow\[Kumoh Gaming]\[ESKG]
 
 ----
 
