@@ -8,6 +8,7 @@ https://www.youtube.com/watch?v=e0kNAENN41g
 
 
 ----------------------------------
+
 + 게임 조작법
   + WSAD : 캐릭터 이동
   + E :  아이템 습득
@@ -15,13 +16,19 @@ https://www.youtube.com/watch?v=e0kNAENN41g
   + ESC : 자동저장 / 환경설정 / 메인메뉴
 
 
-+ 사용한 에셋
 
 세이브 파일 경로 : C:\Users\[user name]\AppData\LocalLow\[Kumoh Gaming]\[ESKG]
 
-
-
-
++ 사용한 asset
+  + Asset Store / Standard Assets 2018.4 - Version.1.1.6
+  + sketchfab / Scary Ghost by LordDiego
+  + sketchfab / Samara (The Ring) by CoryRichards  
+  + sketchfab / Rose by Heliona 
+  + sketchfab / #3December - Earmuffs by P3TroV
+  + sketchfab / Love neon sign - wall by daysena 
+  + sketchfab / 
+  + sketchfab / 
+  + sketchfab / 
 사용한 이미지 출처
 손전등 : Pngimg.com
 귀마개 : Freepik - Flaticon
