@@ -21,8 +21,10 @@ https://www.youtube.com/watch?v=e0kNAENN41g
 
 
 + 사용한 asset
-  + Asset Store / Standard Assets 2018.4 - Version.1.1.6 
+  + Asset Store / Standard Assets 2018.4 - Version 1.1.6 
     + firstpersoncharactercontroller
+  + Asset Store / 8K Skybox Pack Free by BG studio - Version 1.6
+    + UrbanNightSky
   + sketchfab / Scary Ghost by LordDiego
   + sketchfab / Samara (The Ring) by CoryRichards  
   + sketchfab / Rose by Heliona 
@@ -30,7 +32,6 @@ https://www.youtube.com/watch?v=e0kNAENN41g
   + sketchfab / Love neon sign - wall by daysena 
   + sketchfab / Meat Hook by Artise1
   + sketchfab / Dried_Meat by carlos.moreno.g
-  + sketchfab / 
   
 + 사용한 이미지 출처
   + 손전등 : Pngimg.com
