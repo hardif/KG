@@ -31,7 +31,8 @@ https://www.youtube.com/watch?v=e0kNAENN41g
   + sketchfab / Meat Hook by Artise1
   + sketchfab / Dried_Meat by carlos.moreno.g
   + sketchfab / 
-사용한 이미지 출처
+  
++ 사용한 이미지 출처
 손전등 : Pngimg.com
 귀마개 : Freepik - Flaticon
 Gameover : https://nioting.com/xe/game_souce_XP/309385
