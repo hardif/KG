@@ -58,7 +58,7 @@ public class POPUPController : MonoBehaviour
     void Update()
     {
         PlayerAndGhostDist[ghostnum, 0] = Mathf.Round(Mathf.Abs(Vector3.Distance(playerTrs.position, this.transform.position)));
-        if(PlayerAndGhostDist[ghostnum,0] < 10 && lockenter)
+        if(PlayerAndGhostDist[ghostnum,0] < 30 && lockenter)
         {
             onClickPopUp(ghostnum); 
 
