@@ -9,7 +9,7 @@ https://www.youtube.com/watch?v=e0kNAENN41g
 
 ----------------------------------
 + 게임 조작법
-  + 캐릭터 이동 : WSAD
+  + WSAD : 캐릭터 이동
   + E :  아이템 습득
   + F : 손전등 ON/OFF (습득했을 시)
   + ESC : 자동저장 / 환경설정 / 메인메뉴
