@@ -16,8 +16,9 @@ https://www.youtube.com/watch?v=e0kNAENN41g
   + ESC : 자동저장 / 환경설정 / 메인메뉴
 
 
-
+------------
 세이브 파일 경로 : C:\Users\[user name]\AppData\LocalLow\[Kumoh Gaming]\[ESKG]
+-----------
 
 + 사용한 asset
   + Asset Store / Standard Assets 2018.4 - Version.1.1.6
