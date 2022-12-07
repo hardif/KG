@@ -8,9 +8,10 @@ https://www.youtube.com/watch?v=e0kNAENN41g
 
 
 ----------------------------------
++ 게임 조작법
+  + ㅇ 
 
-
-
++ 사용한 에셋
 
 세이브 파일 경로 : C:\Users\[user name]\AppData\LocalLow\[Kumoh Gaming]\[ESKG]
 
