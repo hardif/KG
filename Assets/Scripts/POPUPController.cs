@@ -71,7 +71,7 @@ public class POPUPController : MonoBehaviour
     }
     public void onClickPopUp(int ghostnum)
     {
-        if (ghostarr[ghostnum].activeSelf) poparr[ghostnum].SetActive(true);
+        if (!ghostarr[ghostnum].activeSelf) poparr[ghostnum].SetActive(true);
         ghostarr[ghostnum].SetActive(true);
         Time.timeScale = 0;
         lockenter = false;
