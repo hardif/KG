@@ -24,7 +24,7 @@ https://www.youtube.com/watch?v=e0kNAENN41g
 
 
 
-# 게임 설명서
+## 게임 설명서
   + 타이틀 화면 
 	- Start : 게임을 처음부터 시작
 	- Load : 저장된 파일로 게임을 시작
@@ -39,12 +39,12 @@ https://www.youtube.com/watch?v=e0kNAENN41g
 -----
 
 
-# 게임 목표
+## 게임 목표
 + 각 귀신에 맞는 아이템을 모아 탈출
 
 -----
 
-# 기타
+## 기타
 + 세이브 파일 경로 : C:\Users\[user name]\AppData\LocalLow\[Kumoh Gaming]\[ESKG]
 + 제작자 : YHR, KSY, SDA
 
