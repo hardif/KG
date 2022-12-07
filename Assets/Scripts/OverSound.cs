@@ -11,12 +11,6 @@ public class OverSound : MonoBehaviour
         audioData = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public static void playsound()
     {
         audioData.Play();

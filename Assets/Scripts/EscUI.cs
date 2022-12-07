@@ -86,6 +86,7 @@ public class EscUI : MonoBehaviour
                 ManageData.Instance.SaveGameData();
 
 
+                Cursor.visible = true;
                 ESCUI.SetActive(true);
                 ItemImgs.SetActive(false);
                 setbtn.color = new Color32(255, 255, 255, 255);
@@ -129,14 +130,6 @@ public class EscUI : MonoBehaviour
         
     }
 
-    public void OnClickSave()   
-    {
-
-    }
-    public void OnClickLoad()
-    {
-
-    }
     public void OnClickMainMenu()
     {
         gamestop--;
