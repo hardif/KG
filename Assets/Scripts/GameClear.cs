@@ -42,6 +42,7 @@ public class GameClear : MonoBehaviour
     {
         if(!ClearJSB.activeSelf && !ClearVG.activeSelf && !ClearADSN.activeSelf)
         {
+            EscUI.lockesc = true;
             Time.timeScale = 0;
             Pwin.SetActive(true);
 
@@ -87,6 +88,7 @@ public class GameClear : MonoBehaviour
                     audiosource.Play();
                 }
 
+                Time.timeScale = 1;
 
                 GameoverUI.SetActive(false);
                 timer += Time.deltaTime;

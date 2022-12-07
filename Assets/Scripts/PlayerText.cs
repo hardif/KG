@@ -140,7 +140,8 @@ public class PlayerText : MonoBehaviour
             isJSBclear.SetActive(ManageData.Instance.GetGhostClear()[0]);
             isVGaclear.SetActive(ManageData.Instance.GetGhostClear()[1]);
             isADSNclear.SetActive(ManageData.Instance.GetGhostClear()[2]);
-
+            Time.timeScale = 1;
+            txtwin.SetActive(false);
             playercam.enabled = true;
             TitleInit.Load = false;
             
