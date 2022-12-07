@@ -24,7 +24,7 @@ https://www.youtube.com/watch?v=e0kNAENN41g
 
 
 
-+ 게임 설명서
+# 게임 설명서
   + 타이틀 화면 
 	- Start : 게임을 처음부터 시작
 	- Load : 저장된 파일로 게임을 시작
@@ -36,8 +36,8 @@ https://www.youtube.com/watch?v=e0kNAENN41g
   	+ F : 손전등 ON/OFF (습득했을 시)
   	+ ESC : 자동저장 / 환경설정 / 메인메뉴
 
-+ 게임 목표
-	+ 각 귀신에 맞는 아이템을 모아 탈출
+# 게임 목표
++ 각 귀신에 맞는 아이템을 모아 탈출
 
 
 
