@@ -36,6 +36,9 @@ https://www.youtube.com/watch?v=e0kNAENN41g
   	+ F : 손전등 ON/OFF (습득했을 시)
   	+ ESC : 자동저장 / 환경설정 / 메인메뉴
 
++ 게임 목표
+	+ 각 귀신에 맞는 아이템을 모아 탈출
+
 ------
 
 
