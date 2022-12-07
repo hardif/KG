@@ -44,8 +44,9 @@ https://www.youtube.com/watch?v=e0kNAENN41g
 
 -----
 
-
+#기타
 + 세이브 파일 경로 : C:\Users\[user name]\AppData\LocalLow\[Kumoh Gaming]\[ESKG]
++ 제작자 : YHR, KSY, SDA
 
 ----
 
