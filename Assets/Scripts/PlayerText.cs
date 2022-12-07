@@ -117,6 +117,16 @@ public class PlayerText : MonoBehaviour
             adsn2.SetActive(fielditem[9]);
             adsn3.SetActive(fielditem[10]);
 
+
+
+            //가져온 귀신 좌표 정보를 적용
+            Vector3[] gcoord = new Vector3[3];
+            gcoord = ManageData.Instance.GetGhostCoord();
+            JangSanBum.transform.position = gcoord[0];
+            VirginGhost.transform.position = gcoord[1];
+            Aduksini.transform.position = gcoord[2];
+            Physics.SyncTransforms();
+
             //귀신 액티브 정보를 적용
             JangSanBum.SetActive(ManageData.Instance.GetGhostactive()[0]);
             VirginGhost.SetActive(ManageData.Instance.GetGhostactive()[1]);
@@ -124,15 +134,8 @@ public class PlayerText : MonoBehaviour
 
 
 
-            //가져온 귀신 좌표 정보를 적용
-            Vector3 [] gcoord = new Vector3[3];
-            gcoord = ManageData.Instance.GetGhostCoord();
-            JangSanBum.transform.position = gcoord[0];
-            Physics.SyncTransforms();
-            VirginGhost.transform.position = gcoord[1];
-            Physics.SyncTransforms();
-            Aduksini.transform.position = gcoord[2];
-            Physics.SyncTransforms();
+      
+
 
 
             //가져온 귀신 클리어 정보를 적용
